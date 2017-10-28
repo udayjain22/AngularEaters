@@ -13,13 +13,13 @@
   
   
    <servlet>
-  	<servlet-name>MyFirstServlet</servlet-name>
-  	<servlet-class>capEATSample</servlet-class>
+    <servlet-name>HelloWorld</servlet-name>
+  	<servlet-class>capEATSample.HelloWorld</servlet-class>
   	<load-on-startup>1</load-on-startup>
   </servlet>
   
   <servlet-mapping>
-  	<servlet-name>MyFirstServlet</servlet-name>
+  	<servlet-name>HelloWorld</servlet-name>
   	<url-pattern>/</url-pattern>
   </servlet-mapping>
   
