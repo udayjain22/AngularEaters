@@ -18,3 +18,8 @@ http://ec2-34-205-125-150.compute-1.amazonaws.com:8080/Caponeeat/
 # Jenkins
   admin
   admin
+
+
+
+ssh -i "mykey.pem" ec2-user@ec2-54-173-215-135.compute-1.amazonaws.com
+
