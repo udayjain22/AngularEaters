@@ -10,7 +10,7 @@ import {AppComponent} from './app.component';
 import {NavComponent} from './nav/nav.component';
 
 import { appRoutes } from './routes';
-import { MylandingpageComponent } from './mylandingpage/mylandingpage.component';
+import {HomeComponent} from './Home/home.component';
 
 @NgModule({
   imports: [
@@ -23,7 +23,7 @@ import { MylandingpageComponent } from './mylandingpage/mylandingpage.component'
   declarations: [
     AppComponent,
     NavComponent,
-    MylandingpageComponent,
+    HomeComponent,
    ],
   providers: [
 

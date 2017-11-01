@@ -1,0 +1,216 @@
+<router-outlet></router-outlet>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>capEAT landing page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color: gray">
+
+
+	<ngb-carousel>
+		<ng-template ngbSlide>
+			<img src='././assets/images/c1.jpeg' alt="Random first slide" style="height:800px" width="100%">
+			<div class="carousel-caption">
+				<h2 id="text-blue">cap
+					<I>EATS</I>
+				</h2>
+
+				<div>
+
+					<h2>All day meetings , Order n Pick up !!!</h2>
+
+					<br>
+				</div>
+
+				<div>
+
+					<h2>
+
+						<font color="white"> When
+							<I>FOOD</I> is made EASY ,
+							<I>LIFE</I> IS EASY ....</font>
+
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<BR>
+						<BR>
+					</h2>
+				</div>
+
+			</div>
+		</ng-template>
+		<ng-template ngbSlide>
+			<img src='././assets/images/c12.jpeg' alt="Random second slide" style="height:800px" width="100%">
+			<div class="carousel-caption">
+				<div>
+
+					<h2>
+
+						<font color="pink">WCC Specials !!!
+						</font>
+					</h2>
+				</div>
+
+				<div>
+					<h2>
+						<font color="lightgreen">Order & Enjoy!!!</font>
+					</h2>
+				</div>
+
+			</div>
+		</ng-template>
+		<ng-template ngbSlide>
+			<img src='././assets/images/c13.jpeg' alt="Random third slide" style="height:800px" width="100%">
+			<div class="carousel-caption">
+				<div>
+					<h2>
+						<font color="Red"> WC2 Specials </font>
+					</h2>
+
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+				</div>
+				<div>
+					<h2>
+						<font color="lightgreen">Soothing Smoothies ...</font>
+					</h2>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+
+				</div>
+			</div>
+		</ng-template>
+	</ngb-carousel>
+
+
+	<div class="container">
+		<h2>Expand to order</h2>
+
+		<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+			<ngb-panel title="WCC Menus">
+				<ng-template ngbPanelContent>
+					<ul>
+
+						<li>
+							<a>Be Well</a>
+						</li>
+
+						<li>
+							<a>Indian</a>
+						</li>
+						<li>
+							<a>Mexican</a>
+						</li>
+
+						<li>
+							<a>Soup</a>
+						</li>
+						<li>
+							<a>Salad Bar</a>
+						</li>
+					</ul>
+				</ng-template>
+			</ngb-panel>
+			<ngb-panel title="WC8 Menus">
+				<ng-template ngbPanelContent>
+					<ul>
+
+						<li>
+							<a>Be Well</a>
+						</li>
+
+						<li>
+							<a>Indian</a>
+						</li>
+						<li>
+							<a>Mexican</a>
+						</li>
+
+						<li>
+							<a>Soup</a>
+						</li>
+						<li>
+							<a>Salad Bar</a>
+						</li>
+					</ul>
+				</ng-template>
+			</ngb-panel>
+			<ngb-panel title="WC4 Menus">
+				<ng-template ngbPanelContent>
+					<ul>
+
+						<li>
+							<img src="././assets/images/BBQ.png" class="img_class" />
+							<a href="url">Be Well</a>
+						</li>
+
+						<li>
+							<a>Indian</a>
+						</li>
+						<li>
+							<a>Mexican</a>
+						</li>
+
+						<li>
+							<a>Soup</a>
+						</li>
+						<li>
+							<a>Salad Bar</a>
+						</li>
+					</ul>
+				</ng-template>
+			</ngb-panel>
+		</ngb-accordion>
+
+
+		<footer>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			<a href="https://www.facebook.com/capitalone" class="fa fa-facebook" target="_blank" rel="noopener noreferrer" title="Link opens in a new window"></a>
+			<a href="https://twitter.com/capitalone" class="fa fa-twitter" target="_blank" rel="noopener noreferrer" title="Link opens in a new window"></a>
+			<a href="https://www.linkedin.com/company/capital-one" class="fa fa-linkedin" target="_blank" rel="noopener noreferrer" title="Link opens in a new window"></a>
+			<a href="https://www.youtube.com/user/CapitalOne" class="fa fa-youtube" target="_blank" rel="noopener noreferrer" title="Link opens in a new window"></a>
+			<a href="https://www.instagram.com/capitalone/" class="fa fa-instagram" target="_blank" rel="noopener noreferrer" title="Link opens in a new window"></a>
+			<b>© Team AngularEaters</b>
+		</footer>
+
+		<div class="ft-bg"></div>
+
+		<button routerLink="/addcart">addcart</button>
+	</div>
+	<h6 align="center">Copyright © 2017 . All Rights Reserved. Powered by
+		<a href="aboutangulareaters.html" target="_blank">AngularEaters</a>
+	</h6>
+
+</body>
+
+</html>
