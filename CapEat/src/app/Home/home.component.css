@@ -1,0 +1,118 @@
+#text-blue{
+	color:#337ab7;
+}
+.body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #D3D3D3;
+  }
+  
+  .jumbotron { 
+      /* background-image: url("././Images/Food.jpg"); */ */
+      background-color: #D3D3D3;
+      margin-bottom: 0;
+      min-height: 50%;
+      height: 300px;
+      background-repeat: no-repeat;
+      background-position: center;
+      -webkit-background-size: cover;
+      background-size: cover;
+  }
+  
+  #capOneHeader {
+      color: white;
+      font-family: Arial;
+      font-size: 90px;
+  }
+  
+  #ssoidLabel {
+      color: black;
+      margin-right: 3px;
+      font-size: 20px;
+      font-family: helvetica; 
+  }
+  
+  .btn btn-primary btn-lg btn-block {
+      margin-top: 100px;
+  }
+  
+  #capEatContainer {
+      background-color: #D3D3D3;
+     
+  }
+  
+  #navigationForm {
+      background-color: #D3D3D3;
+  }
+  
+  #navBar {
+      background-color: #D3D3D3;
+  }
+  
+  .img_class {
+      width:60px;
+      height:50px;
+  }
+  
+  #eatText {
+      color: #2E60C4; 
+      font-size: 100px;
+      font-family: impact;
+  }
+  
+  .header {
+      margin-top: 120px;
+     
+  }
+  
+  #oneText {
+      color: white;
+      font-size: 90px;
+      font-family: Arial;
+  }
+  
+  #orderHistoryButton {
+      margin-top: 35px;
+      align-self: right;
+      
+  }
+
+  .fa {
+    padding: 18px;
+    font-size: 16px;
+    width: 50px;
+    text-align: center;
+    margin: 8px 2px;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
+
