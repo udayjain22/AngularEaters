@@ -16,11 +16,8 @@ git branch
 git remote --v 
 
 git checkout -b branch name 
-
 git add . 
-
 git commit -m "mesaage "
-
 
 git push yourremote branch name (never used master)
 
