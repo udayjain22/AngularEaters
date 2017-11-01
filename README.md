@@ -11,6 +11,9 @@ Then npm start
 
 # Check in 
 please create a branch and then check in 
+git branch
+
+git remote --v 
 
 git checkout -b branch name 
 
@@ -18,7 +21,6 @@ git add .
 
 git commit -m "mesaage "
 
-jaagtha
 
 git push yourremote branch name (never used master)
 
