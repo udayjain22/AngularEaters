@@ -112,8 +112,13 @@
 	<div class="container">
 		<h2>Expand to order</h2>
 
-		<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-			<ngb-panel title="WCC Menus">
+		<ngb-accordion [closeOthers]="true" activeIds="static-1">
+			<ngb-panel id="static-1">
+				<ng-template ngbPanelTitle>
+					<span>
+						<b>West Creek Commons (The Commons & West Creek 8)</b>
+					</span>
+				</ng-template>
 				<ng-template ngbPanelContent>
 					<ul>
 
@@ -146,7 +151,12 @@
 					</ul>
 				</ng-template>
 			</ngb-panel>
-			<ngb-panel title="WC2 Menus">
+			<ngb-panel id="static-2">
+				<ng-template ngbPanelTitle>
+					<span>
+						<b>EATS (West Creek 1 & West Creek 2)</b>
+					</span>
+				</ng-template>
 				<ng-template ngbPanelContent>
 					<ul>
 
@@ -179,7 +189,12 @@
 					</ul>
 				</ng-template>
 			</ngb-panel>
-			<ngb-panel title="WC4 Menus">
+			<ngb-panel id="static-3">
+				<ng-template ngbPanelTitle>
+					<span>
+						<b>The Village (West Creek 3 & West Creek 4)</b>
+					</span>
+				</ng-template>
 				<ng-template ngbPanelContent>
 					<ul>
 
@@ -207,7 +222,46 @@
 						</li>
 					</ul>
 				</ng-template>
+				
 			</ngb-panel>
+			<ngb-panel id="static-4">
+					<ng-template ngbPanelTitle>
+						<span>
+							<b>Cafe 56 (West Creek 5 & West Creek 6)</b>
+						</span>
+					</ng-template>
+					<ng-template ngbPanelContent>
+						<ul>
+	
+							<li>
+								<img src="././assets/images/Apple.png" class="img_class" />
+								<a href="url">Be Well</a>
+							</li>
+	
+							<li>
+								<img src="././assets/images/rice.png" class="img_class" />
+								<a href="url">Indian</a>
+							</li>
+							<li>
+								<img src="././assets/images/Sandwich.png" class="img_class" />
+								<a href="url">Sandwich</a>
+							</li>
+							<li>
+								<img src="././assets/images/Action.png" class="img_class" />
+								<a href="url">Action</a>
+							</li>
+	
+							<li>
+								<img src="././assets/images/Soup.png" class="img_class" />
+								<a href="url">Soup</a>
+							</li>
+							<li>
+								<img src="././assets/images/Salad.png" class="img_class" />
+								<a href="url">Salad</a>
+							</li>
+						</ul>
+					</ng-template>
+				</ngb-panel>
 		</ngb-accordion>
 
 
