@@ -18,6 +18,8 @@ git add .
 
 git commit -m "mesaage "
 
+jaagtha
+
 git push yourremote branch name (never used master)
 
 Then go to github and issue the Pull request
