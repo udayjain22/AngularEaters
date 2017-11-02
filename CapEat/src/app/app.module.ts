@@ -35,13 +35,12 @@ import {AddCartComponent} from './Addcart/addcart.component'
     AppComponent,
     NavComponent,
     HomeComponent,
-navcomponent
+    NavComponent,
     FooterComponent,
     MenuComponent,
     StarComponent,
     AddCartComponent,
-  master
-   ],
+  ],
   providers: [
     MenuService
    ],
