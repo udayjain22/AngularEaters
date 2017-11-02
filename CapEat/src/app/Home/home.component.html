@@ -14,17 +14,19 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
-<body style="background-color: gray">
+<body style="background-color: black">
 
 
 	<ngb-carousel>
 		<ng-template ngbSlide>
-			<img src='././assets/images/c1.jpeg' alt="Random first slide" style="height:800px" width="100%">
+			<img class="img" src='././assets/images/Burger.jpg' alt="Random first slide" width=100%>
 			<div class="carousel-caption">
 				<h2 id="text-blue">cap
 					<I>EATS</I>
 				</h2>
-
+				<br>
+				<br>
+				
 				<div>
 
 					<h2>All day meetings , Order n Pick up !!!</h2>
@@ -39,41 +41,44 @@
 						<font color="white"> When
 							<I>FOOD</I> is made EASY ,
 							<I>LIFE</I> IS EASY ....</font>
-
+							<br>
 						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<BR>
-						<BR>
+					
+						
 					</h2>
 				</div>
 
 			</div>
 		</ng-template>
 		<ng-template ngbSlide>
-			<img src='././assets/images/c12.jpeg' alt="Random second slide" style="height:800px" width="100%">
+			<img class="img" src='././assets/images/c2.jpeg' alt="Random second slide"  width="100%">
 			<div class="carousel-caption">
 				<div>
 
 					<h2>
 
-						<font color="pink">WCC Specials !!!
+						<font color="green">WCC Specials !!!
 						</font>
+						<br>
+						<br>
+						
+	
 					</h2>
 				</div>
 
 				<div>
 					<h2>
-						<font color="lightgreen">Order & Enjoy!!!</font>
+						<font color="orange">Order & Enjoy!!!</font>
 					</h2>
+					<br>
+					<br>
+					<br>
 				</div>
 
 			</div>
 		</ng-template>
 		<ng-template ngbSlide>
-			<img src='././assets/images/c13.jpeg' alt="Random third slide" style="height:800px" width="100%">
+			<img  class="img" src='././assets/images/c13.jpeg' alt="Random third slide" width="100%">
 			<div class="carousel-caption">
 				<div>
 					<h2>
@@ -82,17 +87,8 @@
 
 					<br>
 					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
+					
+					
 				</div>
 				<div>
 					<h2>
@@ -102,8 +98,7 @@
 					<br>
 					<br>
 					<br>
-					<br>
-					<br>
+					
 
 				</div>
 			</div>
@@ -113,7 +108,7 @@
 		<h2>Expand to order</h2>
 
 		<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-			<ngb-panel title="WCC Menus">
+			<ngb-panel id="toggle-1" title="WCC Menus" >
 				<ng-template ngbPanelContent>
 					<ul>
 
@@ -146,7 +141,7 @@
 					</ul>
 				</ng-template>
 			</ngb-panel>
-			<ngb-panel title="WC2 Menus">
+			<ngb-panel id="toggle-2" title="WC2 Menus">
 				<ng-template ngbPanelContent>
 					<ul>
 
@@ -179,7 +174,7 @@
 					</ul>
 				</ng-template>
 			</ngb-panel>
-			<ngb-panel title="WC4 Menus">
+			<ngb-panel id="toggle-3" title="WC4 Menus">
 				<ng-template ngbPanelContent>
 					<ul>
 
@@ -220,14 +215,13 @@
 			<a href="https://www.linkedin.com/company/capital-one" class="fa fa-linkedin" target="_blank" rel="noopener noreferrer" title="Link opens in a new window"></a>
 			<a href="https://www.youtube.com/user/CapitalOne" class="fa fa-youtube" target="_blank" rel="noopener noreferrer" title="Link opens in a new window"></a>
 			<a href="https://www.instagram.com/capitalone/" class="fa fa-instagram" target="_blank" rel="noopener noreferrer" title="Link opens in a new window"></a>
-			<b>© Team AngularEaters</b>
+	
 		</footer>
 
 		<div class="ft-bg"></div>
 
-		<button routerLink="/addcart">addcart</button>
 	</div>
-	<h6 align="center">Copyright © 2017 . All Rights Reserved. Powered by
+	<h6 align="center"><font color="orange">Copyright © 2017 . All Rights Reserved. Powered by</font>
 		<a href="aboutangulareaters.html" target="_blank">AngularEaters</a>
 	</h6>
 
