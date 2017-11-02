@@ -31,8 +31,9 @@
                             </button>
                         </th>
                         <th>Item</th>
-                        <th>Price</th>
+                        <th>Description</th>
                         <th>5 Star Rating</th>
+                        <th>Price</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -45,17 +46,15 @@
                                 [style.width.px]='imageWidth'
                                 [style.margin.px]='imageMargin'>
                         </td>
-                        <td><a >
-                                {{ product.productName }}
-                            </a>
-						</td>
-                        <td>{{ product.price | currency:'USD':true:'1.2-2'}}</td>
+                        <td>{{ product.productName }}</td>
+                        <td>{{ product.description }}</td>
                         <td>
                             <pm-star [rating]='product.starRating'
                                 (ratingClicked)='onRatingClicked($event)'>
 							</pm-star>
                         </td>
-                        <td><button type="button" class="btn btn-primary" (click)="addItemToCart(product)">Add</button></td>
+                        <td>{{ product.price | currency:'USD':true:'1.2-2'}}</td>
+                        <td><button type="button" class="btn btn-primary" (click)="addItemToCart(product)">Add To Cart</button></td>
                     </tr>
                 </tbody>
             </table>
