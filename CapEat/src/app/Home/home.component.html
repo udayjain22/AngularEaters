@@ -129,7 +129,7 @@
 
 						<li>
 							<img src="././assets/images/rice.png" class="img_class" />
-							<a href="url">Indian</a>
+							<a [routerLink]="['/menu']"> Indian </a>
 						</li>
 						<li>
 							<img src="././assets/images/Sandwich.png" class="img_class" />
@@ -205,7 +205,7 @@
 
 						<li>
 							<img src="././assets/images/rice.png" class="img_class" />
-							<a href="url">Indian</a>
+							<a [routerLink]="['/menu']"> Indian </a>
 						</li>
 						<li>
 							<img src="././assets/images/Pizza.png" class="img_class" />
@@ -225,44 +225,46 @@
 
 			</ngb-panel>
 			<ngb-panel id="static-4">
-				<ng-template ngbPanelTitle>
-					<span>
-						<b>Cafe 56 (West Creek 5 & West Creek 6)</b>
-					</span>
-				</ng-template>
-				<ng-template ngbPanelContent>
-					<ul>
 
-						<li>
-							<img src="././assets/images/Apple.png" class="img_class" />
-							<a href="url">Be Well</a>
-						</li>
-
-						<li>
-							<img src="././assets/images/rice.png" class="img_class" />
-							<a href="url">Indian</a>
-						</li>
-						<li>
-							<img src="././assets/images/Sandwich.png" class="img_class" />
-							<a href="url">Sandwich</a>
-						</li>
-						<li>
-							<img src="././assets/images/Action.png" class="img_class" />
-							<a href="url">Action</a>
-						</li>
-
-						<li>
-							<img src="././assets/images/Soup.png" class="img_class" />
-							<a href="url">Soup</a>
-						</li>
-						<li>
-							<img src="././assets/images/Salad.png" class="img_class" />
-							<a href="url">Salad</a>
-						</li>
-					</ul>
-				</ng-template>
-			</ngb-panel>
+					<ng-template ngbPanelTitle>
+						<span>
+							<b>Cafe 56 (West Creek 5 & West Creek 6)</b>
+						</span>
+					</ng-template>
+					<ng-template ngbPanelContent>
+						<ul>
+				<li>
+								<img src="././assets/images/Apple.png" class="img_class" />
+								<a href="url">Be Well</a>
+							</li>
+	
+							<li>
+								<img src="././assets/images/rice.png" class="img_class" />
+								<a [routerLink]="['/menu']"> Indian </a>
+							</li>
+							<li>
+								<img src="././assets/images/Sandwich.png" class="img_class" />
+								<a href="url">Sandwich</a>
+							</li>
+							<li>
+								<img src="././assets/images/Action.png" class="img_class" />
+								<a href="url">Action</a>
+							</li>
+	
+							<li>
+								<img src="././assets/images/Soup.png" class="img_class" />
+								<a href="url">Soup</a>
+							</li>
+							<li>
+								<img src="././assets/images/Salad.png" class="img_class" />
+								<a href="url">Salad</a>
+							</li>
+						</ul>
+					</ng-template>
+				</ngb-panel>
 		</ngb-accordion>
+
+
 		</div>
 		<br>
 		
