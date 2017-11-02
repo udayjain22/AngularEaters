@@ -12,10 +12,14 @@ import {NavComponent} from './nav/nav.component';
 
 import { appRoutes } from './routes';
 import {HomeComponent} from './Home/home.component';
+
+import { FooterComponent } from './footer/footer.component';
+
 import { MenuComponent } from './Menu/menu.component';
 import { MenuService } from './Menu/menu.service';
 import { StarComponent } from './shared/star.component';
 import {AddCartComponent} from './Addcart/addcart.component'
+
 
 
 @NgModule({
@@ -31,9 +35,12 @@ import {AddCartComponent} from './Addcart/addcart.component'
     AppComponent,
     NavComponent,
     HomeComponent,
+navcomponent
+    FooterComponent,
     MenuComponent,
     StarComponent,
     AddCartComponent,
+  master
    ],
   providers: [
     MenuService
