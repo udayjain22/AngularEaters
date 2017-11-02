@@ -11,6 +11,7 @@ import {NavComponent} from './nav/nav.component';
 
 import { appRoutes } from './routes';
 import {HomeComponent} from './Home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import {HomeComponent} from './Home/home.component';
     AppComponent,
     NavComponent,
     HomeComponent,
+    FooterComponent,
    ],
   providers: [
 
