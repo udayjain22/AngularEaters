@@ -1,4 +1,45 @@
+
+
 <app-nav></app-nav>
+
+
+
+
+
+ <app-home></app-home> 
+
+
+
+
+  
+<!-- <button (click)="showDialog = !showDialog" class="btn">Open</button> -->
+
+<app-dialog [(visible)]="showDialog">
+        <form>
+                <div class="form-group">
+                    <h2> Sign in </h2>
+                    <hr>
+                  <label for="name">Username</label>
+                  <input type="text" class="form-control" id="name" required>
+                </div>
+           
+                <div class="form-group">
+                  <label for="Password">Password</label>
+                  <input type="password" class="form-control" id="password" required>
+               
+                </div>
+                <br>
+                <button type="submit" class="btn btn-info btn-block">Submit</button>
+            
+              </form>
+  
+</app-dialog>
+
+<!-- 
+    <button (click)="showDialog = !showDialog" class="btn">Close</button>
+    <app-sign></app-sign>
+
+<button (click) = "ClickButton()"></button> -->
 
 <router-outlet></router-outlet>
 <app-footer></app-footer>
