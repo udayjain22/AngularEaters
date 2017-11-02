@@ -112,8 +112,13 @@
 	<div class="container">
 		<h2>Expand to order</h2>
 
-		<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-			<ngb-panel title="WCC Menus">
+		<ngb-accordion [closeOthers]="true" activeIds="static-1" is-open="false">
+			<ngb-panel id="static-1">
+				<ng-template ngbPanelTitle>
+					<span>
+						<b>West Creek Commons (The Commons & West Creek 8)</b>
+					</span>
+				</ng-template>
 				<ng-template ngbPanelContent>
 					<ul>
 
@@ -124,7 +129,7 @@
 
 						<li>
 							<img src="././assets/images/rice.png" class="img_class" />
-							<a href="url">Indian</a>
+							<a [routerLink]="['/menu']"> Indian </a>
 						</li>
 						<li>
 							<img src="././assets/images/Sandwich.png" class="img_class" />
@@ -146,7 +151,12 @@
 					</ul>
 				</ng-template>
 			</ngb-panel>
-			<ngb-panel title="WC2 Menus">
+			<ngb-panel id="static-2">
+				<ng-template ngbPanelTitle>
+					<span>
+						<b>EATS (West Creek 1 & West Creek 2)</b>
+					</span>
+				</ng-template>
 				<ng-template ngbPanelContent>
 					<ul>
 
@@ -179,7 +189,12 @@
 					</ul>
 				</ng-template>
 			</ngb-panel>
-			<ngb-panel title="WC4 Menus">
+			<ngb-panel id="static-3">
+				<ng-template ngbPanelTitle>
+					<span>
+						<b>The Village (West Creek 3 & West Creek 4)</b>
+					</span>
+				</ng-template>
 				<ng-template ngbPanelContent>
 					<ul>
 
@@ -190,7 +205,7 @@
 
 						<li>
 							<img src="././assets/images/rice.png" class="img_class" />
-							<a href="url">Indian</a>
+							<a [routerLink]="['/menu']"> Indian </a>
 						</li>
 						<li>
 							<img src="././assets/images/Pizza.png" class="img_class" />
@@ -207,30 +222,52 @@
 						</li>
 					</ul>
 				</ng-template>
+
 			</ngb-panel>
+			<ngb-panel id="static-4">
+
+					<ng-template ngbPanelTitle>
+						<span>
+							<b>Cafe 56 (West Creek 5 & West Creek 6)</b>
+						</span>
+					</ng-template>
+					<ng-template ngbPanelContent>
+						<ul>
+				<li>
+								<img src="././assets/images/Apple.png" class="img_class" />
+								<a href="url">Be Well</a>
+							</li>
+	
+							<li>
+								<img src="././assets/images/rice.png" class="img_class" />
+								<a [routerLink]="['/menu']"> Indian </a>
+							</li>
+							<li>
+								<img src="././assets/images/Sandwich.png" class="img_class" />
+								<a href="url">Sandwich</a>
+							</li>
+							<li>
+								<img src="././assets/images/Action.png" class="img_class" />
+								<a href="url">Action</a>
+							</li>
+	
+							<li>
+								<img src="././assets/images/Soup.png" class="img_class" />
+								<a href="url">Soup</a>
+							</li>
+							<li>
+								<img src="././assets/images/Salad.png" class="img_class" />
+								<a href="url">Salad</a>
+							</li>
+						</ul>
+					</ng-template>
+				</ngb-panel>
 		</ngb-accordion>
 
 
-		<footer>
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-			<a href="https://www.facebook.com/capitalone" class="fa fa-facebook" target="_blank" rel="noopener noreferrer" title="Link opens in a new window"></a>
-			<a href="https://twitter.com/capitalone" class="fa fa-twitter" target="_blank" rel="noopener noreferrer" title="Link opens in a new window"></a>
-			<a href="https://www.linkedin.com/company/capital-one" class="fa fa-linkedin" target="_blank" rel="noopener noreferrer" title="Link opens in a new window"></a>
-			<a href="https://www.youtube.com/user/CapitalOne" class="fa fa-youtube" target="_blank" rel="noopener noreferrer" title="Link opens in a new window"></a>
-			<a href="https://www.instagram.com/capitalone/" class="fa fa-instagram" target="_blank" rel="noopener noreferrer" title="Link opens in a new window"></a>
-			<b>© Team AngularEaters</b>
-		</footer>
-
-		<div class="ft-bg"></div>
-
-		<button routerLink="/addcart">addcart</button>
-	</div>
-	<h6 align="center">Copyright © 2017 . All Rights Reserved. Powered by
-		<a href="aboutangulareaters.html" target="_blank">AngularEaters</a>
-	</h6>
-
+		</div>
+		<br>
+		
 </body>
 
 </html>

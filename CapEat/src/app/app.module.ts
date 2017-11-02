@@ -5,6 +5,7 @@ import { UIRouterModule } from '@uirouter/angular';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import {AppComponent} from './app.component';
@@ -16,11 +17,21 @@ import {SigninComponent} from './Signin/sign.component';
 import {DialogComponent} from './Dialogue/dialogue.component';
 import { CreditCardDirectivesModule } from 'ng2-cc-library'
 
+import { FooterComponent } from './footer/footer.component';
+
+import { MenuComponent } from './Menu/menu.component';
+import { MenuService } from './Menu/menu.service';
+import { StarComponent } from './shared/star.component';
+import {AddCartComponent} from './Addcart/addcart.component'
+
+
+
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
     NgbModule.forRoot(),
+    HttpClientModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
     CreditCardDirectivesModule,
@@ -30,10 +41,19 @@ import { CreditCardDirectivesModule } from 'ng2-cc-library'
     AppComponent,
     NavComponent,
     HomeComponent,
+// <<<<<<< signin
     DialogComponent,
    ],
-  providers: [
 
+    NavComponent,
+    FooterComponent,
+    MenuComponent,
+    StarComponent,
+    AddCartComponent,
+  ],
+
+  providers: [
+    MenuService
    ],
   bootstrap: [AppComponent]
 })
