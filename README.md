@@ -44,6 +44,8 @@ http://ec2-54-173-215-135.compute-1.amazonaws.com:8080/job/capEATjob/
 
 #Endpoint to connect postgress
 capeat.cn0466qhz7wl.us-east-1.rds.amazonaws.com
+
 DBUsername capEAT
+
 pwd - test1234
 
