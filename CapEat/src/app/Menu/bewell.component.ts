@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 import { MenuItem } from './menu-item';
-import { MenuService } from './menu.service';
+import { BewellService } from './bewell.service';
 
 
 @Component({
-    templateUrl: './menu.component.html',
-    styleUrls: ['./menu.component.css']
+    templateUrl: './bewell.component.html',
+    styleUrls: ['./bewell.component.css']
 })
-export class MenuComponent implements OnInit {
-    pageTitle: string = 'Indian  Menu';
+export class BewellComponent implements OnInit {
+    pageTitle: string = 'BeWell  Menu';
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = true;
@@ -27,7 +27,7 @@ export class MenuComponent implements OnInit {
     filteredProducts: MenuItem[];
     products: MenuItem[] = [];
 
-    constructor(private menuService: MenuService) {
+    constructor(private bewellService: BewellService) {
 
     }
 
@@ -46,7 +46,7 @@ export class MenuComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.menuService.getMenuItems()
+        this.bewellService.getMenuItems()
                 .subscribe(products => {
                     this.products = products;
                     this.filteredProducts = this.products;
@@ -54,6 +54,6 @@ export class MenuComponent implements OnInit {
                     error => this.errorMessage = <any>error);
     }
     addItemToCart(product:any){
-        this.menuService.addToTheCart(product);
+        this.bewellService.addToTheCart(product);
     }
 }
