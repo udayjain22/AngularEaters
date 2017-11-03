@@ -18,8 +18,8 @@ import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './Menu/menu.component';
 import { MenuService } from './Menu/menu.service';
 import { StarComponent } from './shared/star.component';
-import {AddCartComponent} from './Addcart/addcart.component'
-
+import {AddCartComponent} from './Addcart/addcart.component';
+import {DialogComponent} from './Dialogue/dialogue.component';
 
 
 @NgModule({
@@ -40,6 +40,7 @@ import {AddCartComponent} from './Addcart/addcart.component'
     MenuComponent,
     StarComponent,
     AddCartComponent,
+    DialogComponent,
   ],
   providers: [
     MenuService
