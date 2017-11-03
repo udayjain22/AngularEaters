@@ -16,7 +16,9 @@ import {HomeComponent} from './Home/home.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { MenuComponent } from './Menu/menu.component';
+import { BewellComponent } from './Menu/bewell.component';
 import { MenuService } from './Menu/menu.service';
+import { BewellService } from './Menu/bewell.service';
 import { StarComponent } from './shared/star.component';
 import {AddCartComponent} from './Addcart/addcart.component';
 import {DialogComponent} from './Dialogue/dialogue.component';
@@ -38,12 +40,14 @@ import {DialogComponent} from './Dialogue/dialogue.component';
     NavComponent,
     FooterComponent,
     MenuComponent,
+    BewellComponent,
     StarComponent,
     AddCartComponent,
     DialogComponent,
   ],
   providers: [
-    MenuService
+    MenuService,
+    BewellService
    ],
   bootstrap: [AppComponent]
 })
