@@ -14,15 +14,17 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
-<body style="background-color: gray">
+<body style="background-color: black">
 
 
 	<ngb-carousel>
 		<ng-template ngbSlide>
-			<img src='././assets/images/c1.jpeg' alt="Random first slide" style="height:800px" width="100%">
+				<img class="img" src='././assets/images/Burger.jpg' alt="Random first slide" width=100%>
 			<div class="carousel-caption">
 				<h2 id="text-blue">cap
 					<I>EATS</I>
+					<br>
+					<br>
 				</h2>
 
 				<div>
@@ -43,8 +45,6 @@
 						<br>
 						<br>
 						<br>
-						<br>
-						<br>
 						<BR>
 						<BR>
 					</h2>
@@ -53,27 +53,34 @@
 			</div>
 		</ng-template>
 		<ng-template ngbSlide>
-			<img src='././assets/images/c12.jpeg' alt="Random second slide" style="height:800px" width="100%">
+			<img class="img" src='././assets/images/c2.jpeg' alt="Random second slide" width="100%">
 			<div class="carousel-caption">
 				<div>
 
 					<h2>
 
-						<font color="pink">WCC Specials !!!
+						<font color="green">WCC Specials !!!
+								<br>
+								<br>
 						</font>
 					</h2>
 				</div>
 
 				<div>
+						<br>
+						<br>
+					
 					<h2>
-						<font color="lightgreen">Order & Enjoy!!!</font>
+						<font color="orange">Order & Enjoy!!!</font>
+						<br>
+						<br>
 					</h2>
 				</div>
 
 			</div>
 		</ng-template>
 		<ng-template ngbSlide>
-			<img src='././assets/images/c13.jpeg' alt="Random third slide" style="height:800px" width="100%">
+			<img class="img" src='././assets/images/c13.jpeg' alt="Random third slide"  width="100%">
 			<div class="carousel-caption">
 				<div>
 					<h2>
@@ -82,38 +89,27 @@
 
 					<br>
 					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
+					
 				</div>
 				<div>
+						<br>
 					<h2>
-						<font color="lightgreen">Soothing Smoothies ...</font>
+						<font color="lightgreen">   Soothing Smoothies ...</font>
 					</h2>
 					<br>
 					<br>
 					<br>
-					<br>
-					<br>
-					<br>
+					
 
 				</div>
 			</div>
 		</ng-template>
 	</ngb-carousel>
 	<div class="container">
-		<h2>Expand to order</h2>
+		<br>
 
 		<ngb-accordion [closeOthers]="true" activeIds="static-1" is-open="false">
-			<ngb-panel id="static-1">
+			<ngb-panel id="toggle-1">
 				<ng-template ngbPanelTitle>
 					<span>
 						<b>West Creek Commons (The Commons & West Creek 8)</b>

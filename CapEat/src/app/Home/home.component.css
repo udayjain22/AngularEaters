@@ -1,6 +1,13 @@
 #text-blue{
 	color:#337ab7;
 }
+
+.img {
+    height: 400px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
 .body {
     padding-top: 50px;
     padding-bottom: 20px;

@@ -1,5 +1,24 @@
 <app-nav></app-nav>
-
+<app-dialog [(visible)]="showDialog">
+        <form #form="ngForm" (ngSubmit)="submitForm(form.value)">
+                <div class="form-group">
+                    <h2> Sign in </h2>
+                    <hr>
+                  <label for="name">Username</label>
+                  <input type="text" class="form-control" placeholder="miu834" name="eid" id="eid" data-ng-required="">
+                </div>
+           
+                <div class="form-group">
+                  <label for="Password">Password</label>
+                  <input type="password" class="form-control" id="password" required>
+               
+                </div>
+                <br>
+                <button type="submit" class="btn btn-info btn-block">Submit</button>
+            
+              </form>
+  
+</app-dialog>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
 
