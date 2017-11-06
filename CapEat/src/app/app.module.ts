@@ -22,6 +22,8 @@ import { BewellService } from './Menu/bewell.service';
 import { StarComponent } from './shared/star.component';
 import {AddCartComponent} from './Addcart/addcart.component';
 import {DialogComponent} from './Dialogue/dialogue.component';
+import {MapComponent} from './map/map.component';
+
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import {DialogComponent} from './Dialogue/dialogue.component';
     NgbModule.forRoot(),
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+  
   ],
   declarations: [
     AppComponent,
@@ -44,6 +47,7 @@ import {DialogComponent} from './Dialogue/dialogue.component';
     StarComponent,
     AddCartComponent,
     DialogComponent,
+    MapComponent,
   ],
   providers: [
     MenuService,
