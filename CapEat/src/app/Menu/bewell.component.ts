@@ -27,7 +27,7 @@ export class BewellComponent implements OnInit {
     filteredProducts: MenuItem[];
     products: MenuItem[] = [];
 
-    constructor(private bewellService: BewellService) {
+    constructor(public bewellService: BewellService) {
 
     }
 

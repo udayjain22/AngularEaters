@@ -12,6 +12,7 @@
 	<!--mvc tag -->
 	<mvc:annotation-driven></mvc:annotation-driven>
 
+
 	<!--link between html and request  -->
 	<mvc:resources location="/static" mapping="/**"></mvc:resources>
 

@@ -27,7 +27,7 @@ export class MenuComponent implements OnInit {
     filteredProducts: MenuItem[];
     products: MenuItem[] = [];
 
-    constructor(private menuService: MenuService) {
+    constructor(public menuService: MenuService) {
 
     }
 
