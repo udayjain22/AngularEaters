@@ -21,6 +21,8 @@ import { MenuService } from './Menu/menu.service';
 import { BewellService } from './Menu/bewell.service';
 import {AddCartComponent} from './Addcart/addcart.component';
 import {DialogComponent} from './Dialogue/dialogue.component';
+import {MapComponent} from './map/map.component';
+
 
 
 @NgModule({
@@ -42,6 +44,7 @@ import {DialogComponent} from './Dialogue/dialogue.component';
     BewellComponent,
     AddCartComponent,
     DialogComponent,
+    MapComponent,
   ],
   providers: [
     MenuService,
