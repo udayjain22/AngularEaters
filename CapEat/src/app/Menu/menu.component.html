@@ -48,9 +48,9 @@
                         <td><h4>{{ product.productName }}</h4>
                         <p>{{ product.description }}</td>
                         <td>
-                            <pm-star [rating]='product.starRating'
+                           <!-- <pm-star [rating]='product.starRating'
                                 (ratingClicked)='onRatingClicked($event)'>
-							</pm-star>
+							</pm-star> -->
                         </td>
                         <td>{{ product.price | currency:'USD':true:'1.2-2'}}</td>
                         <td><button type="button" class="btn btn-primary" (click)="addItemToCart(product)">Add To Cart</button></td>

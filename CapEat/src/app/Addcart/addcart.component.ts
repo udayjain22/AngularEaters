@@ -13,11 +13,11 @@ import {ActivatedRoute} from "@angular/router";
 
 export class AddCartComponent {
   serviceName:string;
-  private sub:any;
-  private service:any;
-  private continueShopping:string;
+  public sub:any;
+  public service:any;
+  public continueShopping:string;
 
-  constructor(private menuService: MenuService, private bewellService: BewellService, private route: ActivatedRoute ){
+  constructor(public menuService: MenuService, private bewellService: BewellService, private route: ActivatedRoute ){
       this.sub = this.route.params.subscribe(params => {
       this.serviceName = params['serviceName'];
       if(this.serviceName === 'menu') {

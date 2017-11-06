@@ -19,7 +19,6 @@ import { MenuComponent } from './Menu/menu.component';
 import { BewellComponent } from './Menu/bewell.component';
 import { MenuService } from './Menu/menu.service';
 import { BewellService } from './Menu/bewell.service';
-import { StarComponent } from './shared/star.component';
 import {AddCartComponent} from './Addcart/addcart.component';
 import {DialogComponent} from './Dialogue/dialogue.component';
 import {MapComponent} from './map/map.component';
@@ -32,9 +31,8 @@ import {MapComponent} from './map/map.component';
     HttpModule,
     NgbModule.forRoot(),
     HttpClientModule,
-    RouterModule.forRoot(appRoutes),
-    FormsModule,
-  
+    RouterModule.forRoot(appRoutes, {useHash: true }),
+    FormsModule
   ],
   declarations: [
     AppComponent,
@@ -44,7 +42,6 @@ import {MapComponent} from './map/map.component';
     FooterComponent,
     MenuComponent,
     BewellComponent,
-    StarComponent,
     AddCartComponent,
     DialogComponent,
     MapComponent,
