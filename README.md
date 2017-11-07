@@ -30,6 +30,8 @@ http://ec2-54-173-215-135.compute-1.amazonaws.com:8080
 # AWS EC2 - 2nd one with Tomcat
 ec2-34-205-125-150.compute-1.amazonaws.com
 
+http://ec2-34-205-125-150.compute-1.amazonaws.com:8080/CapEAT/static/dist/#/
+
 http://ec2-34-205-125-150.compute-1.amazonaws.com:8080/Caponeeat/
 
 
