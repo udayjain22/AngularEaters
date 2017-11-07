@@ -1,0 +1,42 @@
+.body {
+    background-color: black;
+}
+
+#dropdownContent {
+    width: 500px;
+    height: 130px;
+    background-color: rgb(245, 197, 115);
+}
+
+
+#dropdownBasic1 {
+    display:inline-block;
+    margin-left: 500px;      
+    position: relative;
+    width: 500px;
+    height: 40px;
+    background-color: orange;
+    font-size: 20px;
+  
+
+}
+
+#capOneImage {
+    display:inline-block;
+    margin-left: 315px;      
+    position: relative;
+    width: 800px;
+    height: 500px;
+   
+   
+
+}
+
+#mapHeader {
+    text-align: center;
+}
+
+#mapDescription {
+    text-align: center;
+}
+

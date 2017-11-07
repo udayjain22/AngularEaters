@@ -1,0 +1,89 @@
+#text-blue{
+	color:#337ab7;
+}
+
+.img {
+    height: 400px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+.body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #D3D3D3;
+  }
+  
+  .jumbotron { 
+      /* background-image: url("././Images/Food.jpg"); */ */
+      background-color: #D3D3D3;
+      margin-bottom: 0;
+      min-height: 50%;
+      height: 300px;
+      background-repeat: no-repeat;
+      background-position: center;
+      -webkit-background-size: cover;
+      background-size: cover;
+  }
+  
+  #capOneHeader {
+      color: white;
+      font-family: Arial;
+      font-size: 90px;
+  }
+  
+  #ssoidLabel {
+      color: black;
+      margin-right: 3px;
+      font-size: 20px;
+      font-family: helvetica; 
+  }
+  
+  .btn btn-primary btn-lg btn-block {
+      margin-top: 100px;
+  }
+  
+  #capEatContainer {
+      background-color: #D3D3D3;
+     
+  }
+  
+  #navigationForm {
+      background-color: #D3D3D3;
+  }
+  
+  #navBar {
+      background-color: #D3D3D3;
+  }
+  
+  .img_class {
+      width:60px;
+      height:50px;
+  }
+  
+  #eatText {
+      color: #2E60C4; 
+      font-size: 100px;
+      font-family: impact;
+  }
+  
+  .header {
+      margin-top: 120px;
+     
+  }
+  
+  #oneText {
+      color: white;
+      font-size: 90px;
+      font-family: Arial;
+  }
+  
+  #orderHistoryButton {
+      margin-top: 35px;
+      align-self: right;
+      
+  }
+
+  
+  
+
