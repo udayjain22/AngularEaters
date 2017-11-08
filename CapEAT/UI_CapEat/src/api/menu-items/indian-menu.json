@@ -5,7 +5,7 @@
         "productCode": "IND-01",
         "description": "this will include marinated chicken with rich sauce",
         "price": 7.95,
-        "starRating": 4.2,
+        "spice": 4,
         "imageUrl": "./assets/images/Chicken_Biryani.jpg"
     },
     {
@@ -14,7 +14,7 @@
         "productCode": "IND-02",
         "description": "include rice, bread, and a smile",
         "price": 5.9,
-        "starRating": 4.8,
+        "spice": 3,
         "imageUrl": "./assets/images/shahi-paneer-recipe.jpg"
     },
     {
@@ -23,7 +23,7 @@
         "productCode": "IND-03",
         "description": "Samosa",
         "price": 3.55,
-        "starRating": 3.7,
+        "spice": 2,
         "imageUrl": "./assets/images/Samosa.JPG"
     },
     {
@@ -32,7 +32,7 @@
         "productCode": "IND-04",
         "description": "Chicken curry with Rice",
         "price": 7.95,
-        "starRating": 4.6,
+        "spice": 4,
         "imageUrl": "./assets/images/Chicken_curry_with_Rice.jpg"
     }, {
         "productId": 10,
@@ -40,7 +40,7 @@
         "productCode": "IND-05",
         "description": "Vegetable fried rice",
         "price": 6.95,
-        "starRating": 4.6,
+        "spice": 2,
         "imageUrl": "./assets/images/Vegetable_fried_rice.jpg"
     }
 ]

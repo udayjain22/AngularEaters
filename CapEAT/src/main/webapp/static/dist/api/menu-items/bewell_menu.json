@@ -5,7 +5,7 @@
         "productCode": "BW-01",
         "description": "This will include Asian shrimp, pasta with cucumber slices, red pepper",
         "price": 4.95,
-        "starRating": 4.2,
+        "spice": 2,
         "imageUrl": "./assets/images/shrimp_pasta.jpg"
     },
     {
@@ -14,7 +14,7 @@
         "productCode": "BW-02",
         "description": "include pasta and fried veggies in olive oil",
         "price": 5.9,
-        "starRating": 4.0,
+        "spice": 4,
         "imageUrl": "./assets/images/paste_veg.jpg"
     },
     {
@@ -23,7 +23,7 @@
         "productCode": "BW-03",
         "description": "Grilled Vegetable Platter with Picnic Vinaigrette and asparagus spears, sliced tomatos",
         "price": 4.55,
-        "starRating": 3.7,
+        "spice": 3,
         "imageUrl": "./assets/images/grilledveg.jpeg"
     },
     {
@@ -32,7 +32,7 @@
         "productCode": "BW-04",
         "description": "Soy Ginger Salmon moist and flavorful baked salmon with honey soy ginger glaze",
         "price": 3.95,
-        "starRating": 5.0,
+        "spice": 3,
         "imageUrl": "./assets/images/Baked-Soy-Ginger-Salmon.jpg"
     }, {
         "productId": 10,
@@ -40,7 +40,7 @@
         "productCode": "IND-05",
         "description": "Roasted Carrots, Potatoes & Onions with salt & papper",
         "price": 4.25,
-        "starRating": 4.2,
+        "spice": 4,
         "imageUrl": "./assets/images/Roasted_Carrots_Potatoes_Onions.jpg"
     }
 ]
