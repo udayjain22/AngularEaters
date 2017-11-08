@@ -1,0 +1,16 @@
+.main{
+    background: black;
+    text-align: -webkit-center;
+    font-size: 16px;
+    color: blueviolet;
+}
+
+.header{
+    font-size: -webkit-xxx-large;
+    color: blue;
+}
+
+.img_class {
+    width:260px;
+    height:250px;
+}
