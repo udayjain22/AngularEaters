@@ -24,6 +24,9 @@ import { DialogComponent } from './Dialogue/dialogue.component';
 import { MapComponent } from './map/map.component';
 import { PaymentComponent } from './payment/payment.component';
 import { HistoryComponent } from './history/history.component';
+import { CateringComponent } from './catering/catering.component';
+import { SpecialComponent } from './special/special.component';
+import { SpiceLevelComponent } from './spice-level/spice-level.component';
 
 
 
@@ -49,6 +52,9 @@ import { HistoryComponent } from './history/history.component';
     MapComponent,
     PaymentComponent,
     HistoryComponent,
+    CateringComponent,
+    SpecialComponent,
+    SpiceLevelComponent,
   ],
   providers: [
     MenuService,
