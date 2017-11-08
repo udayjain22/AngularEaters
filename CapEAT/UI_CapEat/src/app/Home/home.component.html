@@ -19,7 +19,7 @@
 
 	<ngb-carousel>
 		<ng-template ngbSlide>
-				<img class="img" src='././assets/images/Burger.jpg' alt="Random first slide" width=100%>
+			<img class="img" src='././assets/images/Burger.jpg' alt="Random first slide" width=100%>
 			<div class="carousel-caption">
 				<h2 id="text-blue">cap
 					<I>EATS</I>
@@ -60,16 +60,16 @@
 					<h2>
 
 						<font color="green">WCC Specials !!!
-								<br>
-								<br>
+							<br>
+							<br>
 						</font>
 					</h2>
 				</div>
 
 				<div>
-						<br>
-						<br>
-					
+					<br>
+					<br>
+
 					<h2>
 						<font color="orange">Order & Enjoy!!!</font>
 						<br>
@@ -80,7 +80,7 @@
 			</div>
 		</ng-template>
 		<ng-template ngbSlide>
-			<img class="img" src='././assets/images/c13.jpeg' alt="Random third slide"  width="100%">
+			<img class="img" src='././assets/images/c13.jpeg' alt="Random third slide" width="100%">
 			<div class="carousel-caption">
 				<div>
 					<h2>
@@ -89,17 +89,17 @@
 
 					<br>
 					<br>
-					
+
 				</div>
 				<div>
-						<br>
+					<br>
 					<h2>
-						<font color="lightgreen">   Soothing Smoothies ...</font>
+						<font color="lightgreen"> Soothing Smoothies ...</font>
 					</h2>
 					<br>
 					<br>
 					<br>
-					
+
 
 				</div>
 			</div>
@@ -222,48 +222,69 @@
 			</ngb-panel>
 			<ngb-panel id="static-4">
 
-					<ng-template ngbPanelTitle>
-						<span>
-							<b>Cafe 56 (West Creek 5 & West Creek 6)</b>
-						</span>
-					</ng-template>
-					<ng-template ngbPanelContent>
-						<ul>
-				<li>
-								<img src="././assets/images/Apple.png" class="img_class" />
-								<a [routerLink]="['/bewell']">Be Well</a>
-							</li>
-	
-							<li>
-								<img src="././assets/images/rice.png" class="img_class" />
-								<a [routerLink]="['/menu']"> Indian </a>
-							</li>
-							<li>
-								<img src="././assets/images/Sandwich.png" class="img_class" />
-								<a href="url">Sandwich</a>
-							</li>
-							<li>
-								<img src="././assets/images/Action.png" class="img_class" />
-								<a href="url">Action</a>
-							</li>
-	
-							<li>
-								<img src="././assets/images/Soup.png" class="img_class" />
-								<a href="url">Soup</a>
-							</li>
-							<li>
-								<img src="././assets/images/Salad.png" class="img_class" />
-								<a href="url">Salad</a>
-							</li>
-						</ul>
-					</ng-template>
-				</ngb-panel>
+				<ng-template ngbPanelTitle>
+					<span>
+						<b>Cafe 56 (West Creek 5 & West Creek 6)</b>
+					</span>
+				</ng-template>
+				<ng-template ngbPanelContent>
+					<ul>
+						<li>
+							<img src="././assets/images/Apple.png" class="img_class" />
+							<a [routerLink]="['/bewell']">Be Well</a>
+						</li>
+
+						<li>
+							<img src="././assets/images/rice.png" class="img_class" />
+							<a [routerLink]="['/menu']"> Indian </a>
+						</li>
+						<li>
+							<img src="././assets/images/Sandwich.png" class="img_class" />
+							<a href="url">Sandwich</a>
+						</li>
+						<li>
+							<img src="././assets/images/Action.png" class="img_class" />
+							<a href="url">Action</a>
+						</li>
+
+						<li>
+							<img src="././assets/images/Soup.png" class="img_class" />
+							<a href="url">Soup</a>
+						</li>
+						<li>
+							<img src="././assets/images/Salad.png" class="img_class" />
+							<a href="url">Salad</a>
+						</li>
+					</ul>
+				</ng-template>
+			</ngb-panel>
 		</ngb-accordion>
 
 
-		</div>
-		<br>
-		
+	</div>
+	<br>
+	<div>
+		<app-dialog [(visible)]="showDialog">
+			<form #form="ngForm">
+				<div class="form-group">
+					<h2> Sign in </h2>
+					<hr>
+					<label for="name">Username</label>
+					<input type="text" class="form-control" placeholder="miu834" name="eid" id="eid" data-ng-required="">
+				</div>
+
+				<div class="form-group">
+					<label for="Password">Password</label>
+					<input type="password" class="form-control" id="password" required>
+
+				</div>
+				<br>
+				<button type="submit" class="btn btn-info btn-block">Submit</button>
+
+			</form>
+
+		</app-dialog>
+	</div>
 </body>
 
 </html>

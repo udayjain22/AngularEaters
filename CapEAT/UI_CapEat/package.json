@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
-    "build": "ng build --prod --env=prod --base-href=/CapEAT/static/dist --deploy-url=/CapEAT/static/dist/",
+    "build": "ng build --prod --env=prod --base-href=/CapEAT/static/dist/ --deploy-url=/CapEAT/static/dist/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
