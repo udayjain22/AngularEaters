@@ -5,7 +5,8 @@ import { BewellComponent } from './Menu/bewell.component';
 import { HomeComponent } from './Home/home.component';
 import { PaymentComponent } from './payment/payment.component';
 import {AddCartComponent} from './Addcart/addcart.component';
-import {MapComponent} from './map/map.component'
+import {MapComponent} from './map/map.component';
+import { HistoryComponent } from './history/history.component';
 
 
 export const appRoutes: Routes = [
@@ -14,5 +15,6 @@ export const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   {path: 'addCart/:serviceName', component: AddCartComponent},
   {path: 'payment', component: PaymentComponent},
+  {path: 'history', component: HistoryComponent},
   {path: 'maps', component: MapComponent }
 ];
