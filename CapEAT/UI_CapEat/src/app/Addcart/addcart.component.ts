@@ -1,8 +1,8 @@
-import { Component,  OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuItem } from '../Menu/menu-item';
 import { MenuService } from '../Menu/menu.service';
 import { BewellService } from '../Menu/bewell.service';
-import {ActivatedRoute} from "@angular/router";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-addcart',
@@ -12,22 +12,46 @@ import {ActivatedRoute} from "@angular/router";
 
 
 export class AddCartComponent {
-  serviceName:string;
-  public sub:any;
-  public service:any;
-  public continueShopping:string;
+  serviceName: string;
+  public sub: any;
+  public service: any;
+  public continueShopping: string;
+  public arr: any[];
+  public total;
+  public value;
+  remove(index: number) {
+    console.log(index);
+    this.arr.splice(index, 1);
 
-  constructor(public menuService: MenuService, private bewellService: BewellService, private route: ActivatedRoute ){
-      this.sub = this.route.params.subscribe(params => {
-      this.serviceName = params['serviceName'];
-      if(this.serviceName === 'menu') {
-          this.service = menuService;
-          this.continueShopping = '/menu';
+  }
+  getTotal = function () {
+    this.total = 0;
+    this.arr.forEach(element => {
+      this.total += element.price * element.orderCount + 0.5;
+    });
+    return this.total;
+  };
+  
+  getValue(value: number) {
+    console.log(value);
+    return value;
+  }
+
+
+
+  constructor(public menuService: MenuService, public bewellService: BewellService, public route: ActivatedRoute ) {
+    this.arr = menuService.cartItems;
+    this.value = 0;
+    this.sub = this.route.params.subscribe(params => {
+      this.serviceName = params['serviceName'];
+      if (this.serviceName === 'menu') {
+        this.service = menuService;
+        this.continueShopping = '/menu';
       } else {
         this.service = bewellService;
         this.continueShopping = '/bewell';
       }
-      })
+    });
 
   }
 }

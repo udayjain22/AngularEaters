@@ -1,59 +1,98 @@
 <html>
-        <head>
-    
-                <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-                
-        </head>
-        <body>
+
+<head>
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
     <div class="container">
         <table id="cart" class="table table-hover table-condensed">
-                        <thead>
-                            <tr>
-                                <th style="width:50%">Product</th>
-                                <th style="width:10%">Price</th>
-                                <th style="width:8%">Quantity</th>
-                                <th style="width:22%" class="text-center">Subtotal</th>
-                                <th style="width:10%"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor="let product of service.cartItems">
-                                <td data-th="Product">
-                                    <div class="row">
-                                        <div class="col-sm-2 hidden-xs"><img
-                                [src]='product.imageUrl'
-                                [title]='product.productName'
-                                [style.width.px]='80'
-                                [style.height.px]='80'></div>
-                                        <div class="col-sm-10">
-                                            <h4 class="nomargin">{{product.productName}}</h4>
-                                            <p>{{product.description}}
-                                        </div>
-                                    </div>
-                                </td>
-                                <td data-th="Price">{{product.price}}</td>
-                                <td data-th="Quantity">
-                                    <input type="number" class="form-control text-center" [(ngModel)]="product.orderCount">
-                                </td>
-                                <td data-th="Subtotal" class="text-center">1.99</td>
-                                <td class="actions" data-th="">
-                                    <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
-                                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr class="visible-xs">
-                                <td class="text-center"><strong>Total 1.99</strong></td>
-                            </tr>
-                            <tr>
-                                <td><a [routerLink]="[continueShopping]" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
-                                <td colspan="2" class="hidden-xs"></td>
-                                <td class="hidden-xs text-center"><strong>Total $1.99</strong></td>
-                                <td><a [routerLink]="['/payment']" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
-                            </tr>
-                        </tfoot>
-                    </table>
+            <thead>
+                <tr>
+                    <th style="width:50%">Product</th>
+                    <th style="width:30%">Spice Level</th>
+                    <th style="width:50%">Additional Info</th>
+                    <th style="width:10%;padding:15px;padding-bottom:5px;">Price</th>
+                    <th style="width:8%">Quantity</th>
+                    <th style="width:22%;padding-left:30px;" class="text-center">SubTotal</th>
+                    <th style="width:10%"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of service.cartItems; let i = index">
+                    <td data-th="Product">
+                        <div class="row">
+
+                            <div class="col-sm-10">
+                                <h4 class="nomargin">{{product.productName}}</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding-top: 20px;width:20%">
+                        <input type="range" name="range" [(ngModel)]="product.spice" min="1" max="5" class="slider" /> Level : {{product.spice}}
+                    </td>
+
+                    <td>
+                        <textarea maxlength=20 placeholder="Special Instructions if any"></textarea>
+                    </td>
+
+                    <td data-th="Price" style="padding:20px;" [(ngModel)]="product.price">{{product.price}}</td>
+                    <td data-th="Quantity">
+                        <input type="number" style="width: 35px;
+                                    height: 20px;" class="text-center" [(ngModel)]="product.orderCount">
+                    </td>
+                    <td style="padding-left:30px;" data-th="SubTotal" class="text-center">
+                        {{product.price * product.orderCount | currency}}
+                    </td>
+
+                    <td class="actions" style="padding-left:30px;" data-th="">
+                        <button class="btn btn-danger btn-sm" (click)="remove(i)">
+                            <i class="fa fa-trash-o"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot style="border:none;">
+
+                <tr>
+                    <td colspan="4" class="hidden-xs"></td>
+                    <td colspan="4" data-th="Total" class="text-right">
+                        <b>Total : {{getTotal() | currency}} </b>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="5" class="text-right">
+                        <I>(Tax and delivery fee are included)</I>
+                    </td>
+                </tr>
+                <tr></tr>
+
+                <tr>
+                    <td>
+                        <a [routerLink]="['/menu']" class="btn btn-warning">
+                            <i class="fa fa-angle-left"></i> Continue Shopping</a>
+                    </td>
+                    <td colspan="5" class="hidden-xs"></td>
+                    <td>
+                        <a [routerLink]="['/payment']" class="btn btn-success btn-block">Checkout
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
     </div>
-    </body>
-    </html>
+    <div>
+
+        Our delivery fee goes to the charity org name capital one More Info :
+        <a [routerLink]="['/menu']" class="btn btn-warning"></a>
+
+    </div>
+</body>
+
+</html>
