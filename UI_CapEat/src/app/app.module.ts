@@ -22,6 +22,7 @@ import { BewellService } from './Menu/bewell.service';
 import {AddCartComponent} from './Addcart/addcart.component';
 import {DialogComponent} from './Dialogue/dialogue.component';
 import {MapComponent} from './map/map.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 
@@ -45,6 +46,7 @@ import {MapComponent} from './map/map.component';
     AddCartComponent,
     DialogComponent,
     MapComponent,
+    PaymentComponent,
   ],
   providers: [
     MenuService,
