@@ -10,6 +10,7 @@ import { HistoryComponent } from './history/history.component';
 import { CateringComponent } from './catering/catering.component';
 import { SpecialComponent } from './special/special.component';
 import { SpiceLevelComponent } from './spice-level/spice-level.component';
+import { ThankyouComponent } from './thankyou/thankyou.component';
 
 
 
@@ -23,5 +24,6 @@ export const appRoutes: Routes = [
   {path: 'maps', component: MapComponent },
   {path: 'catering', component: CateringComponent },
   {path: 'special', component: SpecialComponent },
-  {path: 'spicelevel', component: SpiceLevelComponent }
+  {path: 'spicelevel', component: SpiceLevelComponent },
+  {path: 'thankyou', component: ThankyouComponent },
 ];
