@@ -8,9 +8,6 @@ import com.capeat.beans.UserSignIn;
 
 public interface UserDAO {
 
-	
-	
-	//public UserSignin get(int eid);
-	public List<UserSignIn> listAll();
+	public List<UserSignIn> authentication(UserSignIn user);
 	
 }
