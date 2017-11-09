@@ -13,9 +13,9 @@
 	<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="org.postgresql.Driver"></property>
 		<property name="url"
-			value="jdbc:postgresql://localhost:5432/postgres?currentSchema=capeat"></property>
-		<property name="username" value="postgres"></property>
-		<property name="password" value="password"></property>
+			value="jdbc:postgresql://capeat.cn0466qhz7wl.us-east-1.rds.amazonaws.com:5432/capEAT?currentSchema=capcafe"></property>
+		<property name="username" value="capEAT"></property>
+		<property name="password" value="test1234"></property>
 	</bean>
 
 	<bean id="myJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
