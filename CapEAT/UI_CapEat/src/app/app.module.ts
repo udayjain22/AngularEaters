@@ -27,6 +27,7 @@ import { HistoryComponent } from './history/history.component';
 import { CateringComponent } from './catering/catering.component';
 import { SpecialComponent } from './special/special.component';
 import { SpiceLevelComponent } from './spice-level/spice-level.component';
+import { ThankyouComponent } from './thankyou/thankyou.component';
 
 
 
@@ -55,6 +56,7 @@ import { SpiceLevelComponent } from './spice-level/spice-level.component';
     CateringComponent,
     SpecialComponent,
     SpiceLevelComponent,
+    ThankyouComponent,
   ],
   providers: [
     MenuService,
