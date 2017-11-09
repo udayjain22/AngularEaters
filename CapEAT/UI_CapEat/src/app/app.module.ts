@@ -25,6 +25,8 @@ import { CateringComponent } from './catering/catering.component';
 import { SpecialComponent } from './special/special.component';
 import { SpiceLevelComponent } from './spice-level/spice-level.component';
 import { LoginService } from './Services/login.service';
+import { ThankyouComponent } from './thankyou/thankyou.component';
+
 
 
 @NgModule({
@@ -52,6 +54,7 @@ import { LoginService } from './Services/login.service';
     CateringComponent,
     SpecialComponent,
     SpiceLevelComponent,
+    ThankyouComponent,
   ],
   providers: [
     MenuService,

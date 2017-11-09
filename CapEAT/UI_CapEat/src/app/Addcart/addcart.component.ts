@@ -20,7 +20,6 @@ export class AddCartComponent {
   public total;
   public value;
   remove(index: number) {
-    console.log(index);
     this.arr.splice(index, 1);
 
   }
