@@ -64,3 +64,9 @@
     background: #125688;
     color: white;
   }
+
+  .footer {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  
