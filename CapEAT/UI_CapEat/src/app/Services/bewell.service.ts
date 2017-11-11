@@ -6,12 +6,12 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 
-import { MenuItem } from './menu-item';
+import { MenuItem } from '../Menu/menu-item';
 
 @Injectable()
-export class MenuService {
-    private _menuUrl = './api/menu-items/indian-menu.json';
-    public cartItems:Array<MenuItem>=[];
+export class BewellService {
+    private _menuUrl = './api/menu-items/bewell_menu.json';
+    public cartItems:Array<MenuItem>= [];
  constructor(private _http: HttpClient) { }
 
     getMenuItems(): Observable<MenuItem[]> {
@@ -42,20 +42,18 @@ export class MenuService {
     }
 
     addToTheCart(menuItem:MenuItem){
-        let item = this.cartItems.find((item)=>item.productId===menuItem.productId);
-        if(!item){
+        let item = this.cartItems.find((item) => item.productId === menuItem.productId);
+        if (!item) {
             item = menuItem;
             this.cartItems.push(item);
-            item.orderCount=0;
+            item.orderCount = 0;
         }
-        item.orderCount+=1;
+        item.orderCount += 1;
     }
 
-    getTotalCartItems(){
-        let cnt=0;
-        this.cartItems.forEach((item)=>cnt+=item.orderCount);
+    getTotalCartItems() {
+        let cnt = 0;
+        this.cartItems.forEach((item) => cnt += item.orderCount);
         return cnt;
     }
-    
-
 }
