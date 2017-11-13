@@ -12,29 +12,39 @@ import { Injectable, Inject } from '@angular/core';
 
 
 export class HomeComponent implements OnInit {
-
   title = 'home';
   public eid;
   public password;
-  public myParams : Object;
+  public myParams: Object;
+  public userstatus = 'first';
+
   showDialog;
-
   constructor(public loginservice: LoginService) {
-    this.showDialog = true;
-  }
+    console.log(this.userstatus);
+    if (this.userstatus === 'first') {
+      this.showDialog = true;
+    }
+    if (this.userstatus === 'none') {
+      this.showDialog = false;
+    }
 
+  }
   ngOnInit() {
 
   }
   verifyUser() {
-    this.myParams={
-      "eid" :this.eid,
-      "password":this.password
+    this.myParams = {
+      "eid": this.eid,
+      "password": this.password
     };
+
     this.loginservice.getConnection(this.myParams).subscribe((resp) => {
-      console.log(resp.json());
+      this.userstatus = resp.json().status;
+      if (this.userstatus === 'Pass') {
+        this.showDialog = false;
+      }
     });
+    this.userstatus = 'none'
 
   }
-
 }
