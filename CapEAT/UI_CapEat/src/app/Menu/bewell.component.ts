@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { MenuItem } from './menu-item';
-import { BewellService } from './bewell.service';
+import { BewellService } from '../Services/bewell.service';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { BewellService } from './bewell.service';
 })
 export class BewellComponent implements OnInit {
     pageTitle: string = 'BeWell  Menu';
-    imageWidth: number = 50;
+    imageWidth: number = 80;
     imageMargin: number = 2;
     showImage: boolean = true;
     errorMessage: string;

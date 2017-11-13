@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from '../Menu/menu-item';
-import { MenuService } from '../Menu/menu.service';
-import { BewellService } from '../Menu/bewell.service';
-import { ActivatedRoute } from "@angular/router";
+import { MenuService } from '../Services/menu.service';
+import { BewellService } from '../Services/bewell.service';
+import { HistoryService } from '../Services/history.service';
+import {HistoryItem} from '../history/history-item';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-addcart',
@@ -30,7 +32,6 @@ export class AddCartComponent {
     });
     return this.total;
   };
-  
   getValue(value: number) {
     console.log(value);
     return value;
@@ -38,7 +39,8 @@ export class AddCartComponent {
 
 
 
-  constructor(public menuService: MenuService, public bewellService: BewellService, public route: ActivatedRoute ) {
+  constructor(public menuService: MenuService, public historyService: HistoryService,
+    public bewellService: BewellService, public route: ActivatedRoute ) {
     this.arr = menuService.cartItems;
     this.value = 0;
     this.sub = this.route.params.subscribe(params => {
@@ -46,6 +48,18 @@ export class AddCartComponent {
       if (this.serviceName === 'menu') {
         this.service = menuService;
         this.continueShopping = '/menu';
+      }else if (this.serviceName === 'history') {
+        this.service = historyService;
+        this.continueShopping = '/history';
+    historyService.cartItems.forEach((item: HistoryItem) => {
+        item['productName'] = item.itemName;
+        item['orderCount'] = item.orderQuantity;
+        item['spice'] = item.spiceLevel;
+        item['price'] = item.itemPrice;
+
+  }
+);
+
       } else {
         this.service = bewellService;
         this.continueShopping = '/bewell';

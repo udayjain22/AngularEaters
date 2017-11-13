@@ -3,13 +3,17 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
-		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
 
-	<context:component-scan base-package="com.capeat"></context:component-scan>
+	<!-- Component scan for spring core -->
+	<context:component-scan base-package="com.capeat" />
+
+	<!-- Scanning for controller classes -->
 	<mvc:annotation-driven />
 	<mvc:resources location="/static" mapping="/**"></mvc:resources>
-
+	
+	
 	<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="org.postgresql.Driver"></property>
 		<property name="url"
@@ -18,16 +22,13 @@
 		<property name="password" value="test1234"></property>
 	</bean>
 	
-	<!--local  -->
-<!-- 		<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+	
+<!-- 	<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="org.postgresql.Driver"></property>
-		<property name="url"
-			value="jdbc:postgresql://localhost:5432/postgres?currentSchema=capeat"></property>
+		<property name="url" value="jdbc:postgresql://localhost:5433/postgres"></property>
 		<property name="username" value="postgres"></property>
 		<property name="password" value="password"></property>
 	</bean> -->
-	
-	
 
 	<bean id="myJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="myDataSource"></property>
@@ -36,4 +37,10 @@
 	<bean id="userDAO" class="com.capeat.DAO.UserDAOImpl">
 		<property name="jdbcTemplate" ref="myJdbcTemplate"></property>
 	</bean>
+
+	<bean id="ordersDAO" class="com.capeat.DAO.OrdersDAOImpl">
+		<property name="jdbcTemplate" ref="myJdbcTemplate"></property>
+	</bean>
+
+
 </beans>

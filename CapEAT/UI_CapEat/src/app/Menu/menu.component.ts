@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { MenuItem } from './menu-item';
-import { MenuService } from './menu.service';
+import { MenuService } from '../Services/menu.service';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { MenuService } from './menu.service';
 })
 export class MenuComponent implements OnInit {
     pageTitle: string = 'Indian  Menu';
-    imageWidth: number = 50;
+    imageWidth: number = 80;
     imageMargin: number = 2;
     showImage: boolean = true;
     errorMessage: string;
