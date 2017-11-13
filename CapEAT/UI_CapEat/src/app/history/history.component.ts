@@ -1,4 +1,7 @@
-import { Component,  OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HistoryService } from '../Services/history.service';
+import { HistoryItem} from './history-item';
+
 
 @Component({
   selector: 'app-history',
@@ -7,14 +10,20 @@ import { Component,  OnInit } from '@angular/core';
 })
 export class HistoryComponent implements OnInit {
 
+  public orderHistory: Array<HistoryItem> = [];
+  public selectedOrders: Array<HistoryItem> = [];
 
+  constructor(public history: HistoryService) {
+    this.history.getHistory().subscribe((resp) => {
+      this.orderHistory = resp.json();
+    });
 
-  constructor() {
+   }
 
+  ngOnInit() {
 
   }
-
-  ngOnInit()  {
-
+  addItemToCart(order: any) {
+        this.history.addToTheCart(order);
     }
 }

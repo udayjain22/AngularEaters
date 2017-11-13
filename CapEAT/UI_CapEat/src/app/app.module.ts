@@ -14,8 +14,8 @@ import { HomeComponent } from './Home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './Menu/menu.component';
 import { BewellComponent } from './Menu/bewell.component';
-import { MenuService } from './Menu/menu.service';
-import { BewellService } from './Menu/bewell.service';
+import { MenuService } from './Services/menu.service';
+import { BewellService } from './Services/bewell.service';
 import { AddCartComponent } from './Addcart/addcart.component';
 import { DialogComponent } from './Dialogue/dialogue.component';
 import { MapComponent } from './map/map.component';
@@ -25,6 +25,7 @@ import { CateringComponent } from './catering/catering.component';
 import { SpecialComponent } from './special/special.component';
 import { NutritionComponent } from './nutrition/nutrition.component';
 import { LoginService } from './Services/login.service';
+import { HistoryService } from './Services/history.service';
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
@@ -62,6 +63,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     MenuService,
     BewellService,
     LoginService,
+    HistoryService,
    ],
   bootstrap: [AppComponent]
 })
