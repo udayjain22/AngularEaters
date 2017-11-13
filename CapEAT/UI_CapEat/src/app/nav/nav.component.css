@@ -1,5 +1,5 @@
 #text-blue{
-    color:#337ab7 ;
+    color: black;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -8,3 +8,19 @@
     cursor: pointer;
     font-size: 18px;
 }
+
+.navbar {
+    background-color: #7395AE;
+    margin: 0px;
+    
+}
+
+.image {
+    width: 150px;
+    height: 100px;
+}
+
+.form-control {
+    margin: 0px;
+}
+
