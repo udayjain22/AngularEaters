@@ -62,6 +62,7 @@ import { ThankyouComponent } from './thankyou/thankyou.component';
     BewellService,
     LoginService,
     HistoryService,
+    HomeComponent,
    ],
   bootstrap: [AppComponent]
 })
