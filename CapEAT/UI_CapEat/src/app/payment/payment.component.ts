@@ -13,5 +13,6 @@ export class PaymentComponent implements OnInit {
 
   ngOnInit()  {
    }
-
+   // tslint:disable-next-line:member-ordering
+   public option = 1;
  }
