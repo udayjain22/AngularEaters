@@ -1,5 +1,5 @@
 #text-blue{
-    color: black;
+    color: rgb(38, 55, 66);
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -10,7 +10,7 @@
 }
 
 .navbar {
-    background-color: #7395AE;
+    background-color: #557A95;
     margin: 0px;
     
 }

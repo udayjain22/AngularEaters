@@ -1,53 +1,26 @@
-<html class="main">
-<br>
-<h1> Welcome to Capital One Cafeteria
-    <!-- at West Creek Campus,  -->
-    <!-- <br>based in the heart of Richmond. -->
-</h1>
-<h4>
-    We offer a high quality buffet with an oriental twist.
-    <br> We offer a vast range of over 40+ dishes on our buffet where you can find tasty oriental food prepared only by our finest,
-    highly experienced chefs.
-    <br> Are you looking for the ultimate dining experience? Let us spoil you with our cocktails with great flavors while you
-    choose from our buffet.
-</h4>
-<form>
-    <div>
-        <h2>Breakfast</h2>
-        <p>
-            <li>Bagel</li>
-            <li>Seasonal Fruit Salad</li>
-            <li>Seasonal Muffin, Butter and Jam</li>
-            <li>Assorted Individual Bottled Juices</li>
-            <li>Assorted Flavored and Whipped Cream Cheese, Salted Butter and Jam</li>
-        </p>
-    </div>
-</form>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #7395AE">
+    <div class="container-fluid">
+<h1 class="chefHeader">Welcome to The Chef's Table</h1>
+<h4 class="subheader">Need to order enough food to feed a hungry team? Order From A Pre-Selected Menu. </h4>
 
-<form>
-    <div>
-        <h2>Lunch</h2>
-        <p>
-            <li>Bagel</li>
-            <li>Seasonal Fruit Salad</li>
-            <li>Seasonal Muffin, Butter and Jam</li>
-            <li>Assorted Individual Bottled Juices</li>
-            <li>Assorted Flavored and Whipped Cream Cheese, Salted Butter and Jam</li>
-        </p>
-    </div>
-</form>
 
-<form>
-    <div>
-        <h2>Dinner</h2>
-        <p>
-            <li>Bagel</li>
-            <li>Seasonal Fruit Salad</li>
-            <li>Seasonal Muffin, Butter and Jam</li>
-            <li>Assorted Individual Bottled Juices</li>
-            <li>Assorted Flavored and Whipped Cream Cheese, Salted Butter and Jam</li>
-        </p>
-    </div>
-</form>
+<a [routerLink]="['/breakfast']">
+    <img src="././assets/images/breakfast.png" id="breakfastMenu" data-toggle="modal" data-target="#myModal">
+    </a>
+    <br>
+    <br>
+<a [routerLink]="['/lunch']">
+        <img src="././assets/images/lunch.png" id="lunchMenu">
+        </a>
 <br>
+<br>
+</div>
+
+</body>
 </html>
