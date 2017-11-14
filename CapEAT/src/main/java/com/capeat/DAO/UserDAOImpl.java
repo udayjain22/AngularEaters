@@ -51,6 +51,7 @@ public class UserDAOImpl implements UserDAO {
 		try {
 			String sql = ("SELECT * FROM capcafe.carddetails WHERE carddetails.sid=" + us.getSid());
 			CardDet cd = (CardDet) jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<CardDet>(CardDet.class));
+			cd.setSid(us.getSid());
 			return cd;
 		} catch (EmptyResultDataAccessException e) {
 			return null;

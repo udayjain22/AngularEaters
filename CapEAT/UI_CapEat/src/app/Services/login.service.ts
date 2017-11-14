@@ -15,7 +15,6 @@ export class LoginService {
   }
 
   getConnection(user): Observable<any> {
-    console.log(user);
     return this.http.post('/CapEAT/signin', user);
   }
 
