@@ -48,11 +48,11 @@ public class LandingController {
 	}
 
 	@RequestMapping(value = "/history", method = RequestMethod.POST)
-	public @ResponseBody History listAll(@RequestBody String sid) {
+	public @ResponseBody List<History> listAll(@RequestBody String sid) {
 		System.out.println("hello history");
-		
-		History history = historyDAO.history(Integer.parseInt(sid));
-		System.out.println(history);
-		return history;
+		List<History> listHistory = new ArrayList<History>();
+		listHistory = historyDAO.historyList(sid);
+		System.out.println(listHistory.toString());
+		return listHistory;
 	}
 }

@@ -11,7 +11,7 @@ public interface HistoryDAO {
 
 	
 	
-	//public UserSignin get(int eid);
-	public History history(int sid);
+
+	public List<History> historyList(String eid);
 	
 }
