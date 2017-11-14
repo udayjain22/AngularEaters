@@ -56,6 +56,10 @@
     font-size: small;
 }
 
-.big_font{
-    font-size: x-large;
+.med_font{
+    font-size: medium;
+}
+
+#newcard{
+    margin-right: 80px;
 }
