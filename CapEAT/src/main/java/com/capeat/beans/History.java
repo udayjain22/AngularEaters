@@ -3,7 +3,7 @@
 
 	import java.sql.Date;
 
-	public class Orders {
+	public class History {
 		
 	private int orderId;
 	private Date orderDate;
@@ -13,11 +13,11 @@
 	private String itemDesc;
 	private String itemPrice;
 	private String orderLocation;
-	public Orders() {
+	public History() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Orders(int orderId, Date orderDate, int orderQuantity, int spiceLevel, String itemName, String itemDesc,
+	public History(int orderId, Date orderDate, int orderQuantity, int spiceLevel, String itemName, String itemDesc,
 			String itemPrice, String orderLocation) {
 		super();
 		this.orderId = orderId;
@@ -79,7 +79,7 @@
 	}
 	@Override
 	public String toString() {
-		return "Orders [orderId=" + orderId + ", orderDate=" + orderDate + ", orderQuantity=" + orderQuantity
+		return "History [orderId=" + orderId + ", orderDate=" + orderDate + ", orderQuantity=" + orderQuantity
 				+ ", spiceLevel=" + spiceLevel + ", itemName=" + itemName + ", itemDesc=" + itemDesc + ", itemPrice="
 				+ itemPrice + ", orderLocation=" + orderLocation + "]";
 	}

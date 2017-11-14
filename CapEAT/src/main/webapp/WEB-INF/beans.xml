@@ -38,7 +38,7 @@
 		<property name="jdbcTemplate" ref="myJdbcTemplate"></property>
 	</bean>
 
-	<bean id="ordersDAO" class="com.capeat.DAO.OrdersDAOImpl">
+	<bean id="historyDAO" class="com.capeat.DAO.HistoryDAOImpl">
 		<property name="jdbcTemplate" ref="myJdbcTemplate"></property>
 	</bean>
 

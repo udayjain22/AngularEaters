@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 import { MenuItem } from './menu-item';
 import { BreakfastService } from '../Services/breakfast.service';
+import { ActivatedRoute } from '@angular/router';
+
+
 
 
 @Component({
-    templateUrl: './menu.component.html',
-    styleUrls: ['./menu.component.css']
+    templateUrl: './breakfast.component.html',
+    styleUrls: ['./breakfast.component.css']
 })
 export class BreakfastComponent implements OnInit {
     pageTitle: string = 'Breakfast  Menu';
@@ -31,10 +34,7 @@ export class BreakfastComponent implements OnInit {
 
     }
 
-    onRatingClicked(message: string): void {
-        this.pageTitle = 'Product List: ' + message;
-    }
-
+    
     performFilter(filterBy: string): MenuItem[] {
         filterBy = filterBy.toLocaleLowerCase();
         return this.products.filter((product: MenuItem) =>

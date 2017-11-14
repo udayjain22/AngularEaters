@@ -10,11 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.capeat.DAO.OrdersDAOImpl;
+import com.capeat.DAO.HistoryDAO;
+import com.capeat.DAO.HistoryDAOImpl;
 import com.capeat.DAO.UserDAO;
 import com.capeat.DAO.UserDAOImpl;
 import com.capeat.beans.CardDet;
-import com.capeat.beans.Orders;
+import com.capeat.beans.History;
 import com.capeat.beans.UserSignIn;
 
 @Controller
@@ -23,7 +24,7 @@ public class LandingController {
 	UserDAOImpl userDAO;
 
 	@Autowired
-	OrdersDAOImpl ordersDAO;
+	HistoryDAOImpl historyDAO;
 
 	CardDet newCd = new CardDet();
 
@@ -35,8 +36,8 @@ public class LandingController {
 			newCd.setStatus("Fail");
 			return newCd;
 		}
+		System.out.println(cd.getSid());
 		cd.setStatus("Pass");
-		System.out.println(cd);
 		return cd;
 	}
 
@@ -47,11 +48,11 @@ public class LandingController {
 	}
 
 	@RequestMapping(value = "/history", method = RequestMethod.POST)
-	public @ResponseBody List<Orders> listAll(@RequestBody String eid) {
+	public @ResponseBody List<History> listAll(@RequestBody String sid) {
 		System.out.println("hello history");
-		List<Orders> listArtist = new ArrayList<Orders>();
-		listArtist = ordersDAO.historyList(eid);
-		System.out.println(listArtist.toString());
-		return listArtist;
+		List<History> listHistory = new ArrayList<History>();
+		listHistory = historyDAO.historyList(sid);
+		System.out.println(listHistory.toString());
+		return listHistory;
 	}
 }

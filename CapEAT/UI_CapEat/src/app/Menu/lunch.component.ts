@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
 import { MenuItem } from './menu-item';
 import { LunchService } from '../Services/lunch.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
-    templateUrl: './menu.component.html',
-    styleUrls: ['./menu.component.css']
+    templateUrl: './lunch.component.html',
+    styleUrls: ['./lunch.component.css']
 })
 export class LunchComponent implements OnInit {
     pageTitle: string = 'Lunch  Menu';

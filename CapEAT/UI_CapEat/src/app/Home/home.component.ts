@@ -17,10 +17,10 @@ export class HomeComponent implements OnInit {
   public password;
   public myParams: Object;
   public userstatus = 'first';
+  public sid;
 
   showDialog;
   constructor(public loginservice: LoginService) {
-    console.log(this.userstatus);
     if (this.userstatus === 'first') {
       this.showDialog = true;
     }
@@ -40,11 +40,12 @@ export class HomeComponent implements OnInit {
 
     this.loginservice.getConnection(this.myParams).subscribe((resp) => {
       this.userstatus = resp.json().status;
+      this.sid = resp.json().sid;
+      localStorage.setItem("sid", this.sid);
       if (this.userstatus === 'Pass') {
         this.showDialog = false;
       }
     });
-    this.userstatus = 'none'
-
+    this.userstatus = 'none';
   }
 }

@@ -1,5 +1,7 @@
 package com.capeat.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class CardDet {
 
 	private int cardid;
@@ -10,14 +12,15 @@ public class CardDet {
 	private String cardcvv;
 	private String zipcode;
 	private String Status;
-
+	private int sid;
+	
 	public CardDet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
 	public CardDet(int cardid, String nameoncard, String cardnumber, String cardtype, String cardexpiredt,
-			String cardcvv, String zipcode, String status) {
+			String cardcvv, String zipcode, String status, int sid) {
 		super();
 		this.cardid = cardid;
 		this.nameoncard = nameoncard;
@@ -27,6 +30,7 @@ public class CardDet {
 		this.cardcvv = cardcvv;
 		this.zipcode = zipcode;
 		Status = status;
+		this.sid = sid;
 	}
 
 	public int getCardid() {
@@ -93,6 +97,14 @@ public class CardDet {
 		Status = status;
 	}
 
+	public int getSid() {
+		return sid;
+	}
+
+	public void setSid(int sid) {
+		this.sid = sid;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -104,6 +116,7 @@ public class CardDet {
 		result = prime * result + ((cardnumber == null) ? 0 : cardnumber.hashCode());
 		result = prime * result + ((cardtype == null) ? 0 : cardtype.hashCode());
 		result = prime * result + ((nameoncard == null) ? 0 : nameoncard.hashCode());
+		result = prime * result + sid;
 		result = prime * result + ((zipcode == null) ? 0 : zipcode.hashCode());
 		return result;
 	}
@@ -149,6 +162,8 @@ public class CardDet {
 				return false;
 		} else if (!nameoncard.equals(other.nameoncard))
 			return false;
+		if (sid != other.sid)
+			return false;
 		if (zipcode == null) {
 			if (other.zipcode != null)
 				return false;
@@ -161,7 +176,8 @@ public class CardDet {
 	public String toString() {
 		return "CardDet [cardid=" + cardid + ", nameoncard=" + nameoncard + ", cardnumber=" + cardnumber + ", cardtype="
 				+ cardtype + ", cardexpiredt=" + cardexpiredt + ", cardcvv=" + cardcvv + ", zipcode=" + zipcode
-				+ ", Status=" + Status + "]";
+				+ ", Status=" + Status + ", sid=" + sid + "]";
 	}
-
+	
+	
 }

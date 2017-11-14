@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { HistoryService } from '../Services/history.service';
 import { HistoryItem} from './history-item';
+import { HomeComponent } from '../Home/home.component';
 
 
 @Component({
@@ -10,17 +11,24 @@ import { HistoryItem} from './history-item';
 })
 export class HistoryComponent implements OnInit {
 
+  
+  public sid;
+  
+  
   public orderHistory: Array<HistoryItem> = [];
   public selectedOrders: Array<HistoryItem> = [];
 
   constructor(public history: HistoryService) {
-    this.history.getHistory().subscribe((resp) => {
-      this.orderHistory = resp.json();
-    });
-
+    
    }
 
   ngOnInit() {
+    this.sid = localStorage.getItem("sid");
+    console.log(this.sid);
+    this.history.getHistory(this.sid).subscribe((resp) => {
+      this.orderHistory = resp.json();
+      console.log(this.orderHistory)
+    });
 
   }
   addItemToCart(order: any) {

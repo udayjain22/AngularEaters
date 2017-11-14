@@ -4,36 +4,31 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import javax.sql.DataSource;
-
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.capeat.beans.Orders;
-
-
+import com.capeat.beans.History;
 
 @Repository
-public class OrdersDAOImpl implements OrdersDAO {
-	
+public class HistoryDAOImpl implements HistoryDAO {
+
 	private JdbcTemplate jdbcTemplate;
-	
+	History temp = new History();
 
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-			this.jdbcTemplate = jdbcTemplate;
-		}
-	
+		this.jdbcTemplate = jdbcTemplate;
+	}
 
-	@Override
-	public List<Orders> historyList(String eid) {
+	
+	public List<History> historyList(String sid) {
 		String sql = "SELECT * from capcafe.orders WHERE capcafe.orders.sid = "
-				 + Integer.parseInt(eid);
+				 + Integer.parseInt(sid);
 		
-		List<Orders> list = jdbcTemplate.query(sql, new RowMapper<Orders>(){
-            public Orders mapRow(ResultSet rs, int nRows) throws SQLException {
-            	Orders temp = new Orders();
-            	
+		List<History> list = jdbcTemplate.query(sql, new RowMapper<History>(){
+            public History mapRow(ResultSet rs, int nRows) throws SQLException {            	
             	temp.setOrderId(rs.getInt("orderid"));
             	temp.setItemName(rs.getString("productname"));
             	temp.setItemDesc(rs.getString("productdesc"));
@@ -48,5 +43,11 @@ public class OrdersDAOImpl implements OrdersDAO {
 		return list;
 	}
 
-}
 
+	
+
+	public HistoryDAOImpl() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+}

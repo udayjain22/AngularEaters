@@ -8,10 +8,12 @@ import { HistoryItem } from '../history/history-item';
 @Injectable()
 export class HistoryService {
     public cartItems: HistoryItem[] = [];
+   public sid;
     constructor( @Inject(Http) private http: Http) {
     }
-    getHistory(): Observable<any> {
-        return this.http.post('/CapEAT/history', '3');
+    getHistory(sid): Observable<any> {
+        console.log("service"+sid);
+        return this.http.post('/CapEAT/history', sid);
     }
     addToTheCart(historyItem: HistoryItem) {
         let item = this.cartItems.find((item) => item.orderId === historyItem.orderId);

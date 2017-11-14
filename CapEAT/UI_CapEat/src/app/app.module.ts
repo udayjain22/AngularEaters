@@ -35,6 +35,7 @@ import { BreakfastService } from './Services/breakfast.service';
 
 
 
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -71,7 +72,8 @@ import { BreakfastService } from './Services/breakfast.service';
     LoginService,
     HistoryService,
     LunchService,
-    BreakfastService
+    BreakfastService,
+    HomeComponent,
    ],
   bootstrap: [AppComponent]
 })
