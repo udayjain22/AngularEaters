@@ -1,24 +1,46 @@
+<div class="container-fluid">
 <div class="jumbotron text-xs-center">
   <h1 class="display-3">Thank You! Your Order is confirmed</h1>
-  <p class="lead">
+  <p>
     <strong>Please check your email</strong> for further instructions</p>
+
+
+  <div>
+    <a class="btn btn-primary btn-sm" href="https://findmycard.capitalone.com/en/PageVersions/LandingPages/LP_ONE_V01.aspx" role="button">See If You're Pre-Qualified</a>
+    <button (click)="showDialog = !showDialog" class="btn btn-primary btn-sm">Apply for Capitalone Card</button>
+    <a class="btn btn-primary btn-sm" href="#/" role="button">Continue to homepage</a>
+
+    <div align="center" style="border:1px">
+      
+      <app-dialog [(visible)]="showDialog">
+        <h1>
+          <font color="Blue">Congratulation</font>
+        </h1>
+        <h4>
+          <font color="red">This meal on us and we will not charge you for it.</font>
+        </h4>
+        <br>
+        <h4>
+          <font color="Blue">Please use the below link to apply for CapitalOne Card</font>
+        </h4>
+        <br>
+        <h4>
+          <font color="Blue">Change Banking for Good</font>
+        </h4>
+        <a class="btn btn-primary btn-sm" href="https://findmycard.capitalone.com/en/PageVersions/LandingPages/LP_ONE_V01.aspx?external_id=WWW_WD928_ZZZ_ONL-SE_ZZZGO_T_SEM2_ZZZZ_c_Zg_94d47ec3-4022-4230-8064-ca30c1cd5415_149860674647_35598"
+          role="button">Apply Now</a>
+
+      </app-dialog>
+    </div>
+
+  </div>
+
+
   <hr>
   <p>
     Having trouble?
     <a href="mailto:angulareater@capone.com">Contact us</a>
   </p>
-  <p class="lead">
-    <a class="btn btn-primary btn-sm" href="#/" role="button">Continue to homepage</a>
-  </p>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  
+</div>
 </div>
