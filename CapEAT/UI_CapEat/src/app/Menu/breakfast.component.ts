@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
     styleUrls: ['./breakfast.component.css']
 })
 export class BreakfastComponent implements OnInit {
-    pageTitle: string = 'Breakfast  Menu';
+    pageTitle: string = 'Breakfast  Menu (Each option feeds 15 people.)';
     imageWidth: number = 80;
     imageMargin: number = 2;
     showImage: boolean = true;

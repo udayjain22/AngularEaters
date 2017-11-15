@@ -23,13 +23,24 @@
 }
 
 #breakfastMenu {
-    margin-left: 500px;
-    height: 250px;
+    margin: auto;
+    display: block;
     width: 400px;
+    max-width: 100%;
+    height: auto;
 }
 
 #lunchMenu {
-    margin-left: 500px;
-    height: 250px;
+    margin: auto;
+    display: block;
     width: 400px;
+    max-width: 100%;
+    height: auto;
 }
+
+.container {
+    width: 750px;
+    height: 600px;
+   
+
+ }

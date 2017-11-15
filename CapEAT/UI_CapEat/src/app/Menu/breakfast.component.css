@@ -5,8 +5,13 @@
 thead {
     color: #7395AE;
 }
+
+.panel-body {
+    position: relative;
+   }
+
 .cart-box{
-     position: fixed;
+    position: fixed;
   right: 30px;
   width: 48px;
   height: 48px;

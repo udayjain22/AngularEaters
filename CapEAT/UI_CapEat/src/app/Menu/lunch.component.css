@@ -2,6 +2,10 @@
     background-color: #7395AE;
   }
 
+  .panel-body {
+    height: 450px;
+   }
+
 thead {
     color: #7395AE;
 }
@@ -57,6 +61,16 @@ thead {
     padding: 1px 3px;
     font: 8px Verdana;
 }
+
+.body {
+    background-color: #7395AE;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+   
+    
+ }
 
 
 

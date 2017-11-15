@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
     styleUrls: ['./lunch.component.css']
 })
 export class LunchComponent implements OnInit {
-    pageTitle: string = 'Lunch  Menu';
+    pageTitle: string = 'Lunch  Menu (Each option feeds 15 people.)';
     imageWidth: number = 80;
     imageMargin: number = 2;
     showImage: boolean = true;
