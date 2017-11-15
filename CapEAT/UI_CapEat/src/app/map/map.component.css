@@ -1,32 +1,41 @@
 .body {
-    background-color: black;
+    background-color: #7395AE;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+}
+
+.container-fluid {
+    height: 800px;
 }
 
 #dropdownContent {
     width: 500px;
     height: 130px;
-    background-color: rgb(245, 197, 115);
+    background-color: #ADD8E6;
 }
 
 
 #dropdownBasic1 {
     display:inline-block;
-    margin-left: 500px;      
+    margin-left: 485px;      
     position: relative;
     width: 500px;
     height: 40px;
-    background-color: orange;
+    background-color: #557A95;
     font-size: 20px;
+    
   
 
 }
 
 #capOneImage {
-    display:inline-block;
-    margin-left: 315px;      
-    position: relative;
-    width: 800px;
-    height: 500px;
+    max-width: 100%;
+    height: auto;
+    height: 400px;
+    display: block;
+    margin: 0 auto;
    
    
 
@@ -34,9 +43,11 @@
 
 #mapHeader {
     text-align: center;
+    color: #3b5466;
 }
 
 #mapDescription {
     text-align: center;
+    color: #3b5466;
 }
 

@@ -1,6 +1,38 @@
-.color {
+.navbar  {
+ 
+  background-image: none;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  bottom: 0pt;
+  left: 0pt;
+  background-color: #3b5466;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  width: 100%;
+  height: 200px;
+  
+ 
 
-    color: white;
+
+}
+
+.footer {
+  background-color: #3b5466;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  height: 25px;
+  width: 100%;
+  
+  
+  
+}
+
+.color {
+    color: black;
     border: none;
     padding: 15px 32px;
     text-align: center;
@@ -13,8 +45,7 @@
 }
 
 .color2 {
-    background-color: #e7e7e7; 
-    color: black;
+    background-color: #5D5C61; 
     border: none;
     padding: 15px 32px;
     text-align: center;
@@ -68,5 +99,6 @@
   .footer {
     grid-row-start: 2;
     grid-row-end: 3;
+   
   }
   

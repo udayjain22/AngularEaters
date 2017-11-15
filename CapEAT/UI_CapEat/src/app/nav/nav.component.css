@@ -1,10 +1,39 @@
 #text-blue{
-    color:#337ab7 ;
+    color: rgb(38, 55, 66);
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+   display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
     font-size: 18px;
+   
+   
 }
+
+.navbar {
+    background-color: #557A95;
+    margin: 0px;
+    
+}
+
+.image {
+    
+    width: 150px;
+    height: 100px;
+}
+
+.form-control {
+    margin: 0px;
+}
+
+.navbar {
+    width:100%;
+   
+
+}
+
+
+a:hover {
+    text-decoration: underline !important; 
+   
+  }

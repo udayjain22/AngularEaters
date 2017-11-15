@@ -1,5 +1,13 @@
+.panel-heading {
+  background-color: #7395AE;
+}
+
+.panel-body {
+  height: 450px;;
+}
+
 thead {
-    color: #337AB7;
+    color: #7395AE;
 }
 .cart-box{
      position: fixed;

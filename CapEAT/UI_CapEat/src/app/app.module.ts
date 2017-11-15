@@ -23,10 +23,16 @@ import { PaymentComponent } from './payment/payment.component';
 import { HistoryComponent } from './history/history.component';
 import { CateringComponent } from './catering/catering.component';
 import { SpecialComponent } from './special/special.component';
-import { SpiceLevelComponent } from './spice-level/spice-level.component';
+import { NutritionComponent } from './nutrition/nutrition.component';
 import { LoginService } from './Services/login.service';
 import { HistoryService } from './Services/history.service';
 import { ThankyouComponent } from './thankyou/thankyou.component';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { LunchComponent } from './Menu/lunch.component';
+import { BreakfastComponent } from './Menu/breakfast.component';
+import { LunchService } from './Services/lunch.service';
+import { BreakfastService } from './Services/breakfast.service';
+
 
 
 
@@ -37,7 +43,8 @@ import { ThankyouComponent } from './thankyou/thankyou.component';
     NgbModule.forRoot(),
     HttpClientModule,
     RouterModule.forRoot(appRoutes, {useHash: true }),
-    FormsModule
+    FormsModule,
+    ScrollToModule.forRoot()
   ],
   declarations: [
     AppComponent,
@@ -54,14 +61,18 @@ import { ThankyouComponent } from './thankyou/thankyou.component';
     HistoryComponent,
     CateringComponent,
     SpecialComponent,
-    SpiceLevelComponent,
+    NutritionComponent,
     ThankyouComponent,
+    LunchComponent,
+    BreakfastComponent
   ],
   providers: [
     MenuService,
     BewellService,
     LoginService,
     HistoryService,
+    LunchService,
+    BreakfastService,
     HomeComponent,
    ],
   bootstrap: [AppComponent]

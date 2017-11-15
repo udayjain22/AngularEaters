@@ -1,16 +1,50 @@
-.main{
-    background: bottom;
-    text-align: -webkit-center;
-    font-size: 16px;
-    /* color: ; */
-}
 
-.header{
-    font-size: -webkit-xxx-large;
-    color: blue;
-}
 
 .img_class {
     width:260px;
     height:250px;
 }
+
+.chefHeader {
+    text-align: center;
+    color: #3b5466;
+ 
+   
+}
+
+.subheader {
+    text-align: center;
+    color: #3b5466;
+   
+}
+
+.body {
+    background-color: #7395AE;
+}
+
+#breakfastMenu {
+    margin: auto;
+    display: block;
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+
+#lunchMenu {
+    margin: auto;
+    display: block;
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 750px;
+    height: 600px;
+   
+
+ }
+
+ .image:hover {
+    opacity: 0.3;
+ }
