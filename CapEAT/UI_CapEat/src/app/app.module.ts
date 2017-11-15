@@ -27,7 +27,6 @@ import { NutritionComponent } from './nutrition/nutrition.component';
 import { LoginService } from './Services/login.service';
 import { HistoryService } from './Services/history.service';
 import { ThankyouComponent } from './thankyou/thankyou.component';
-import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { LunchComponent } from './Menu/lunch.component';
 import { BreakfastComponent } from './Menu/breakfast.component';
 import { LunchService } from './Services/lunch.service';
@@ -43,8 +42,8 @@ import { BreakfastService } from './Services/breakfast.service';
     NgbModule.forRoot(),
     HttpClientModule,
     RouterModule.forRoot(appRoutes, {useHash: true }),
-    FormsModule,
-    ScrollToModule.forRoot()
+    FormsModule
+
   ],
   declarations: [
     AppComponent,
