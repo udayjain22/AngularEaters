@@ -42,7 +42,8 @@ public class UserDAOImpl implements UserDAO {
 			}
 			return cd;
 		} catch (EmptyResultDataAccessException e) {
-			return null;
+			cd.setStatus("Fail");
+			return cd;
 		}
 	}
 
@@ -52,9 +53,12 @@ public class UserDAOImpl implements UserDAO {
 			String sql = ("SELECT * FROM capcafe.carddetails WHERE carddetails.sid=" + us.getSid());
 			CardDet cd = (CardDet) jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<CardDet>(CardDet.class));
 			cd.setSid(us.getSid());
+			cd.setStatus("HasData");
 			return cd;
 		} catch (EmptyResultDataAccessException e) {
-			return null;
+			cd.setSid(us.getSid());
+			cd.setStatus("NoData");
+			return cd;
 		}
 	}
 }
