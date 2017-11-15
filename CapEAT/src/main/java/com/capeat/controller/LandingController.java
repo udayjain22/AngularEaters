@@ -2,6 +2,7 @@ package com.capeat.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,11 +13,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.capeat.DAO.HistoryDAO;
 import com.capeat.DAO.HistoryDAOImpl;
+import com.capeat.DAO.OrderDAOImpl;
 import com.capeat.DAO.UserDAO;
 import com.capeat.DAO.UserDAOImpl;
-import com.capeat.beans.CardDet;
-import com.capeat.beans.History;
-import com.capeat.beans.UserSignIn;
+import com.capeat.beans.*;
 
 @Controller
 public class LandingController {
@@ -25,19 +25,17 @@ public class LandingController {
 
 	@Autowired
 	HistoryDAOImpl historyDAO;
+	
+	@Autowired
+	OrderDAOImpl orderDAO;
 
 	CardDet newCd = new CardDet();
 
 	@RequestMapping(value = "/signin", method = RequestMethod.POST)
 	public @ResponseBody CardDet listAll(@RequestBody UserSignIn user) {
 		System.out.println("signing controller");
-		CardDet cd = userDAO.authentication(user);
-		if (cd == null) {
-			newCd.setStatus("Fail");
-			return newCd;
-		}
+		CardDet cd = userDAO.authentication(user);		
 		System.out.println(cd.getSid());
-		cd.setStatus("Pass");
 		return cd;
 	}
 
@@ -55,4 +53,22 @@ public class LandingController {
 		System.out.println(listHistory.toString());
 		return listHistory;
 	}
+	
+	@RequestMapping(value="/makepayment",method=RequestMethod.POST)
+	   public @ResponseBody  int listAll(@RequestBody Wrapper w){
+		List<Order> credit = new ArrayList<>();
+		System.out.println(w.getOrder().toString());
+        System.out.println(w.getCreditCard());
+        System.out.println(w.getAmount());
+        System.out.println(w.getSid()); 
+        System.out.println(Double.parseDouble(w.getAmount()));
+        int orderid = orderDAO.insertorder(w.getOrder(), Double.parseDouble(w.getAmount()), Integer.parseInt(w.getSid()));
+        if(w.getCreditCard().getDecision().equals("insert") || w.getCreditCard().getDecision().equals("update")) {
+        		orderDAO.insertCredit(w.getCreditCard(),Integer.parseInt(w.getSid()));
+        }
+        if (w.getCreditCard().getDecision().equals("delete")) {
+            orderDAO.deleteCredit(Integer.parseInt(w.getSid()));
+		}	
+	       return orderid;
+	   }
 }
