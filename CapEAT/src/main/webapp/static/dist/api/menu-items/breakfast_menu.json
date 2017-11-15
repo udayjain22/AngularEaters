@@ -1,0 +1,27 @@
+[
+    {
+        "productId": 14,
+        "productName": "Country Breakfast",
+        "productCode": "IND-14",
+        "description": "Includes buttermilk biscuits, white flour gravy, turkey sausage, scrambled eggs, bacon, homemade strawberry jam and fresh orange juice",
+        "price": 65.00,
+        "imageUrl": "./assets/images/countrybreakfast.jpg"
+    },
+    {
+        "productId": 15,
+        "productName": "Continental Breakfast",
+        "productCode": "IND-15",
+        "description": "Includes scrambled eggs, buttermilk biscuits, waffles and maple syrup, turkey sausage, mixed fruits, fresh orange juice ",
+        "price": 55.00,
+        "imageUrl": "./assets/images/continental_breakfast.jpg"
+    },
+    {
+        "productId": 16,
+        "productName": "Be-Well Breakfast",
+        "productCode": "IND-16",
+        "description": "Includes eggwhites, english muffins, roasted potatoes, turkey sausage, mixed fruit, fresh orange juice",
+        "price": 50.00,
+        "imageUrl": "./assets/images/BeWellBreakfast.jpg"
+    }
+   
+]
