@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid"></div>
 <div class="jumbotron text-xs-center">
   <h1 class="display-3">Thank You! Your Order is confirmed</h1>
   <p>
@@ -11,9 +11,8 @@
     <a class="btn btn-primary btn-sm" href="#/" role="button">Continue to homepage</a>
 
     <div align="center" style="border:1px">
-      
-      <app-dialog [(visible)]="showDialog">
-        <h1>
+
+        <!-- <h1>
           <font color="Blue">Congratulation</font>
         </h1>
         <h4>
@@ -28,10 +27,42 @@
           <font color="Blue">Change Banking for Good</font>
         </h4>
         <a class="btn btn-primary btn-sm" href="https://findmycard.capitalone.com/en/PageVersions/LandingPages/LP_ONE_V01.aspx?external_id=WWW_WD928_ZZZ_ONL-SE_ZZZGO_T_SEM2_ZZZZ_c_Zg_94d47ec3-4022-4230-8064-ca30c1cd5415_149860674647_35598"
-          role="button">Apply Now</a>
+          role="button">Apply Now</a> -->
+
+        <div class="row">
+        
+      <app-dialog [(visible)]="showDialog">
+          <div class="col-xs-12 col-sm-6 col-lg-4">
+            <div class="box">
+              <div class="icon">
+                <div class="image">
+                  <i class="fa fa-thumbs-o-up"></i>
+                </div>
+                <div class="info">
+                  <h3 class="title">Congratulation!</h3>
+                  <h4>This meal on us and we will revert back your charge.</h4>
+                  <p>
+                    Please use the below link to apply for CapitalOne Card
+                  </p>
+                  <div class="btn btn-primary btn-sm">
+                    <a href="https://findmycard.capitalone.com/en/PageVersions/LandingPages/LP_ONE_V01.aspx?external_id=WWW_WD928_ZZZ_ONL-SE_ZZZGO_T_SEM2_ZZZZ_c_Zg_94d47ec3-4022-4230-8064-ca30c1cd5415_149860674647_35598"
+                      title="Title Link">
+                      <font color="white"> Apply Now</font>
+                      <i class="fa fa-angle-double-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="space"></div>
+            </div>
+          </div>
+     
+
+
 
       </app-dialog>
     </div>
+  </div>
 
   </div>
 
@@ -41,6 +72,5 @@
     Having trouble?
     <a href="mailto:angulareater@capone.com">Contact us</a>
   </p>
-  
-</div>
+
 </div>
