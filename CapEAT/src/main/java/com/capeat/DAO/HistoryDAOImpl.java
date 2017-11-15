@@ -16,7 +16,6 @@ import com.capeat.beans.History;
 public class HistoryDAOImpl implements HistoryDAO {
 
 	private JdbcTemplate jdbcTemplate;
-	History temp = new History();
 
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
@@ -28,16 +27,16 @@ public class HistoryDAOImpl implements HistoryDAO {
 				 + Integer.parseInt(sid);
 		
 		List<History> list = jdbcTemplate.query(sql, new RowMapper<History>(){
-            public History mapRow(ResultSet rs, int nRows) throws SQLException {            	
+            public History mapRow(ResultSet rs, int nRows) throws SQLException { 
+            	History temp = new History();
+
             	temp.setOrderId(rs.getInt("orderid"));
             	temp.setItemName(rs.getString("productname"));
-            	temp.setItemDesc(rs.getString("productdesc"));
             	temp.setItemPrice(rs.getString("productprice"));
             	temp.setOrderLocation(rs.getString("orderlocation"));
             	temp.setOrderDate(rs.getDate("orderdt"));
             	temp.setSpiceLevel(rs.getInt("spicelevel"));
-            	System.out.println(temp);
-				return temp;
+            	return temp;
 			}
 		});
 		return list;
