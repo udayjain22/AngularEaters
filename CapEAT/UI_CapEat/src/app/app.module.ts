@@ -32,6 +32,8 @@ import { BreakfastComponent } from './Menu/breakfast.component';
 import { LunchService } from './Services/lunch.service';
 import { BreakfastService } from './Services/breakfast.service';
 import {PaymentService} from './Services/payments.service';
+import { AboutComponent } from './about/about.component';
+import { CharityComponent } from './charity/charity.component';
 
 
 
@@ -63,7 +65,9 @@ import {PaymentService} from './Services/payments.service';
     NutritionComponent,
     ThankyouComponent,
     LunchComponent,
-    BreakfastComponent
+    BreakfastComponent,
+    AboutComponent,
+    CharityComponent
   ],
   providers: [
     MenuService,
