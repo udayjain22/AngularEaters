@@ -1,15 +1,21 @@
 <body>
 <div class="container-fluid">
 
-  <h1 class="display-3">Thank You! Your Order is confirmed</h1>
-  <p>
-    <strong>Please check your email</strong> for further instructions</p>
+  <h1 class="display-3" id="thanksHeader">Thank You! Your order is confirmed.</h1>
+  <h4 class="subheader" id="emailHeader">Please check your email for further instructions.</h4>
 
 
-  <div>
+  <div class="container">
+
+      <span class="separator"></span>
+
+      <h4 class="subheader" id="emailHeader">Not a CapitalOne creditcard holder? Apply for a credit card now to reveal a special deal!</h4>
+      <br>
+
     <a class="btn btn-primary btn-sm" href="https://findmycard.capitalone.com/en/PageVersions/LandingPages/LP_ONE_V01.aspx" role="button">See If You're Pre-Qualified</a>
     <button (click)="showDialog = !showDialog" class="btn btn-primary btn-sm">Apply for Capitalone Card</button>
     <a class="btn btn-primary btn-sm" href="#/" role="button">Continue to homepage</a>
+
 
     <div align="center" style="border:1px">
 
@@ -69,10 +75,7 @@
 
 
  
-  <p>
-    Having trouble?
-    <a href="mailto:angulareater@capone.com">Contact us</a>
-  </p>
+ 
 
 </div>
 
