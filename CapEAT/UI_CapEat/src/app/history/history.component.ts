@@ -27,7 +27,7 @@ export class HistoryComponent implements OnInit {
     console.log(this.sid);
     this.history.getHistory(this.sid).subscribe((resp) => {
       this.orderHistory = resp.json();
-      console.log(this.orderHistory)
+      console.log(this.orderHistory);
     });
 
   }

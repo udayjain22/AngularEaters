@@ -1,105 +1,115 @@
 <html>
 
-    <head>
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="container">
-               <div id="alert">
-                    <a class="alert" href="#alert">10% of Purchase Price Goes To Feedmore</a>
-                    <!-- <a  class="alert" href="feedmore.org">Learn more </a> -->
-                 </div>
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
 
-                 <br>
-                 <br>
-                 <br>
-                 <br>
-            <table id="cart" class="table table-hover table-condensed">
-                <thead>
-                    <tr>
-                        <th style="width:20%">Product</th>
-                        <th style="width:30%">Spice Level</th>
-                        <th style="width:30%">Delivery Location</th>
-                        <th style="width:50%">Additional Info</th>
-                        <th style="width:10%;padding:15px;padding-bottom:5px;">Price</th>
-                        <th style="width:8%">Quantity</th>
-                        <th style="width:22%;padding-left:30px;" class="text-center">SubTotal</th>
-                        <th style="width:10%"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let product of service.cartItems; let i = index">
-                        <td data-th="Product">
-                            <div class="row">
-                                <div class="col-sm-10">
-                                    <h4 class="nomargin">{{product.productName}}</h4>
-                                </div>
+<body>
+    <div class="container">
+        <div id="alert">
+            <a class="alert" href="#alert">10% of Purchase Price Goes To Feedmore</a>
+            <!-- <a  class="alert" href="feedmore.org">Learn more </a> -->
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <table id="cart" class="table table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th style="width:20%">Product</th>
+                    <th style="width:30%">Spice Level</th>
+                    <th style="width:30%">Delivery Location</th>
+                    <th style="width:50%">Additional Info</th>
+                    <th style="width:10%;padding:15px;padding-bottom:5px;">Price</th>
+                    <th style="width:8%">Quantity</th>
+                    <th style="width:22%;padding-left:30px;" class="text-center">SubTotal</th>
+                    <th style="width:10%"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of service.cartItems; let i = index">
+                    <td data-th="Product">
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <h4 class="nomargin">{{product.productName}}</h4>
                             </div>
-                        </td>
-                        <td style="padding-top: 20px;width:20%">
-                            <input type="range" name="range" [(ngModel)]="product.spice" min="1" max="5" class="slider" /> Level : {{product.spice}}
-                        </td>
-                        <td>
-                            <select name="singleSelect" [(ngModel)]="product.location" value="WC1">
-                                <option value="WC1">WC1</option>
-                                <option value="WC2">WC2</option>
-                                <option value="WC3">WC3</option>
-                                <option value="WC4">WC4</option>
-                                <option value="WC5">WC5</option>
-                                <option value="WC6">WC6</option>
-                                <option value="WC7">WC7</option>
-                                <option value="WC8" selected="selected">WC8</option>
-                              </select>
-                        </td>
-                        <td>
-                            <textarea maxlength=20 placeholder="Special Instructions if any"></textarea>
-                        </td>
-                        <td data-th="Price" style="padding:20px;" [(ngModel)]="product.price">{{product.price}}</td>
-                        <td data-th="Quantity">
-                            <input type="number" style="width: 35px;
+  
+                        </div>
+                    </td>
+                    <td style="padding-top: 20px;width:20%">
+                        <input type="range" name="range" [(ngModel)]="product.spice" min="1" max="5" class="slider" /> Level
+                        : {{product.spice}}
+                    </td>
+                    <td>
+                        <select name="singleSelect" [(ngModel)]="product.location">
+                            <option value="WC1">WC1</option>
+                            <option value="WC2">WC2</option>
+                            <option value="WC3">WC3</option>
+                            <option value="WC4">WC4</option>
+                            <option value="WC5">WC5</option>
+                            <option value="WC6">WC6</option>
+                            <option value="WC7">WC7</option>
+                            <option value="WC8">WC8</option>
+                        </select>
+                    </td>
+                    <td>
+                        <textarea maxlength=20 placeholder="Special Instructions if any"></textarea>
+                    </td>
+                    <td data-th="Price" style="padding:20px;" [(ngModel)]="product.price">{{product.price}}</td>
+                    <td data-th="Quantity">
+                        <input type="number" style="width: 35px;
+
                                         height: 20px;" class="text-center" [(ngModel)]="product.orderCount">
-                        </td>
-                        <td style="padding-left:30px;" data-th="SubTotal" class="text-center">
-                            {{product.price * product.orderCount | currency}}
-                        </td>
-                        <td class="actions" style="padding-left:30px;" data-th="">
-                            <button class="btn btn-danger btn-sm" (click)="remove(i)">
+                    </td>
+                    <td style="padding-left:30px;" data-th="SubTotal" class="text-center">
+                        {{product.price * product.orderCount | currency}}
+                    </td>
+                    <td class="actions" style="padding-left:30px;" data-th="">
+                        <button class="btn btn-danger btn-sm" (click)="remove(i)">
                                 <i class="fa fa-trash-o"></i>
                             </button>
-                        </td>
-                    </tr>
-                </tbody>
-                <tfoot style="border:none;">
-                    <tr>
-                        <td colspan="4" class="hidden-xs"></td>
-                        <td colspan="4" data-th="Total" class="text-right">
-                            <b>Total : {{getTotal() | currency}} </b>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td colspan="5" class="text-right">
-                            <I>(Tax and delivery fee are included)</I>
-                        </td>
-                    </tr>
-                    <tr></tr>
-                    <tr>
-                        <td>
-                            <a [routerLink]="[continueShopping]" class="btn btn-warning">
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot style="border:none;">
+                <tr>
+                    <td colspan="4" class="hidden-xs"></td>
+                    <td colspan="4" data-th="Total" class="text-right">
+                        <b>Total : {{getTotal() | currency}} </b>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="5" class="text-right">
+                        <I>(Tax and delivery fee are included)</I>
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td>
+                        <a [routerLink]="[continueShopping]" class="btn btn-warning">
                                 <i class="fa fa-angle-left"></i> Continue Shopping</a>
-                        </td>
-                        <td colspan="6" class="hidden-xs"></td>
-                        <td>
-                            <a [routerLink]="['/payment']" class="btn btn-success btn-block">Checkout
+                    </td>
+                    <td colspan="6" class="hidden-xs"></td>
+                    <td>
+                        <div  *ngIf="this.userStatus === 'HasData'">
+                        <a [routerLink]="['/payment']" class="btn btn-success btn-block">Checkout
                                 <i class="fa fa-angle-right"></i>
-                            </a>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-    </body>
-    </html>
+                        </a>
+                        </div>
+                    <div  *ngIf="this.userStatus === 'NoData'">
+                        <a [routerLink]="['/paymentone']" class="btn btn-success btn-block">Checkout
+                                <i class="fa fa-angle-right"></i>
+                        </a>
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
 
-
+</html>
