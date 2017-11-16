@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from './menu-item';
 import { BreakfastService } from '../Services/breakfast.service';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 
@@ -17,7 +18,8 @@ export class BreakfastComponent implements OnInit {
     imageMargin: number = 2;
     showImage: boolean = true;
     errorMessage: string;
-
+    public router;
+    
     _listFilter: string;
     get listFilter(): string {
         return this._listFilter;
@@ -30,10 +32,13 @@ export class BreakfastComponent implements OnInit {
     filteredProducts: MenuItem[];
     products: MenuItem[] = [];
 
-    constructor(public menuService: BreakfastService) {
-
+    constructor(public menuService: BreakfastService, public routes: Router) {
+        this.router = routes;
     }
-
+    paynow(index: number){
+        localStorage.setItem("lunchchef", JSON.stringify(this.filteredProducts[index]));
+        this.router.navigateByUrl('/payment');            
+    }
     
     performFilter(filterBy: string): MenuItem[] {
         filterBy = filterBy.toLocaleLowerCase();

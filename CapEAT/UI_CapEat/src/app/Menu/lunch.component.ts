@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from './menu-item';
 import { LunchService } from '../Services/lunch.service';
 import { ActivatedRoute } from '@angular/router';
-
+import { Router } from '@angular/router';
 
 @Component({
     templateUrl: './lunch.component.html',
@@ -14,6 +14,7 @@ export class LunchComponent implements OnInit {
     imageMargin: number = 2;
     showImage: boolean = true;
     errorMessage: string;
+    public router;
 
     _listFilter: string;
     get listFilter(): string {
@@ -24,11 +25,16 @@ export class LunchComponent implements OnInit {
         this.filteredProducts = this.listFilter ? this.performFilter(this.listFilter) : this.products;
     }
 
+    paynow(index: number){
+        localStorage.setItem("lunchchef", JSON.stringify(this.filteredProducts[index]));
+        this.router.navigateByUrl('/payment');            
+    }
+
     filteredProducts: MenuItem[];
     products: MenuItem[] = [];
 
-    constructor(public menuService: LunchService) {
-
+    constructor(public menuService: LunchService, public routes: Router) {
+        this.router = routes;
     }
 
     onRatingClicked(message: string): void {
