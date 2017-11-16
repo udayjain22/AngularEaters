@@ -14,6 +14,7 @@ public class Order extends Object {
 	private int orderamount;
 	private int spice;
 	private String location;
+	
 	public Order() {
 		super();
 		// TODO Auto-generated constructor stub

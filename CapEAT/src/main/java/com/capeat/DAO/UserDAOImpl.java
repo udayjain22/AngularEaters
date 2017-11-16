@@ -9,14 +9,15 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
-import com.capeat.beans.CardDet;
+
+import com.capeat.beans.CreditCard;
 import com.capeat.beans.UserSignIn;
 
 @Repository
 public class UserDAOImpl implements UserDAO {
 	private JdbcTemplate jdbcTemplate;
 	UserSignIn us = new UserSignIn();
-	CardDet cd = new CardDet();
+	CreditCard cd = new CreditCard();
 
 	public UserDAOImpl(DataSource ds) {
 		jdbcTemplate = new JdbcTemplate(ds);
@@ -31,14 +32,16 @@ public class UserDAOImpl implements UserDAO {
 	}
 
 	@Override
-	public CardDet authentication(UserSignIn user) {
+	public CreditCard authentication(UserSignIn user) {
 		try {
 			String sql = ("SELECT * FROM capcafe.employee WHERE eid = \'" + user.getEid() + "\' AND password = \'"
 					+ user.getPassword() + "\'");
 			us = (UserSignIn) jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<UserSignIn>(UserSignIn.class));
 			if (us != null) {
 				System.out.println(us.getSid());
+			
 				return getcard();
+			
 			}
 			return cd;
 		} catch (EmptyResultDataAccessException e) {
@@ -48,11 +51,12 @@ public class UserDAOImpl implements UserDAO {
 	}
 
 	@Override
-	public CardDet getcard() {
+	public CreditCard getcard() {
 		try {
 			String sql = ("SELECT * FROM capcafe.carddetails WHERE carddetails.sid=" + us.getSid());
-			CardDet cd = (CardDet) jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<CardDet>(CardDet.class));
+			CreditCard cd = (CreditCard) jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<CreditCard>(CreditCard.class));
 			cd.setSid(us.getSid());
+			System.out.println();
 			cd.setStatus("HasData");
 			return cd;
 		} catch (EmptyResultDataAccessException e) {
