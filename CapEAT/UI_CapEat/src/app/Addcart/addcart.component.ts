@@ -64,7 +64,6 @@ export class AddCartComponent {
         item['orderCount'] = item.orderQuantity;
         item['spice'] = item.spiceLevel;
         item['price'] = item.itemPrice;
-
   }
 );
 
