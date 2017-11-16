@@ -42,15 +42,15 @@
                         : {{product.spice}}
                     </td>
                     <td>
-                        <select ng-model="location" ng-init="location='1' ">
-                            <option ng-selected="true" value="1">WC1</option>
-                            <option value="2">WC2</option>
-                            <option value="3">WC3</option>
-                            <option value="4">WC4</option>
-                            <option value="5">WC5</option>
-                            <option value="6">WC6</option>
-                            <option value="7">WC7</option>
-                            <option value="8">WC8</option>
+                        <select name="singleSelect" [(ngModel)]="product.location">
+                            <option value="WC1">WC1</option>
+                            <option value="WC2">WC2</option>
+                            <option value="WC3">WC3</option>
+                            <option value="WC4">WC4</option>
+                            <option value="WC5">WC5</option>
+                            <option value="WC6">WC6</option>
+                            <option value="WC7">WC7</option>
+                            <option value="WC8">WC8</option>
                         </select>
                     </td>
                     <td>
@@ -93,9 +93,16 @@
                     </td>
                     <td colspan="6" class="hidden-xs"></td>
                     <td>
+                        <div  *ngIf="this.userStatus === 'HasData'">
                         <a [routerLink]="['/payment']" class="btn btn-success btn-block">Checkout
                                 <i class="fa fa-angle-right"></i>
-                            </a>
+                        </a>
+                        </div>
+                    <div  *ngIf="this.userStatus === 'NoData'">
+                        <a [routerLink]="['/paymentone']" class="btn btn-success btn-block">Checkout
+                                <i class="fa fa-angle-right"></i>
+                        </a>
+                        </div>
                     </td>
                 </tr>
             </tfoot>
