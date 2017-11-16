@@ -17,6 +17,18 @@
     
  }
 
+ #thanksHeader {
+     text-align: center;
+     color: white;
+     margin-top: 60px;
+ }
+
+ #emailHeader {
+     text-align: center;
+     color: white;
+     margin-top: 30px;
+ }
+
  .body {
     background-color: #7395AE;
     margin: 0;
@@ -30,6 +42,38 @@
     height: 700px;
 }
 
+.btn btn-primary btn-sm {
+    text-align: center;
+}
+ .container {
+     text-align: center;
+     margin-top: 50px;
+     
+ }
+
+ .btn {
+     width: 180px;
+     height: 50px;
+     margin: 0 auto;
+     padding: 0;
+     display: inline-block;
+     line-height: 50px;
+     text-align: center;
+     font-size: 13px;
+ }
+
+ .separator {
+    display:block;
+    border:none;
+    color: #557A95;
+    height:1px;
+    background: #3b5466;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#3b5466), to(#557A95));
+    
+     
+ }
+
+ 
 
 
  @import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css";
