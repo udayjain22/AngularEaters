@@ -12,6 +12,8 @@ public class CreditCard {
 	private int cvc;
 	private String zipCode;
 	private String decision;
+	private int sid;
+	private String Status;
 	public CreditCard() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -58,16 +60,30 @@ public class CreditCard {
 	public void setDecision(String decision) {
 		this.decision = decision;
 	}
+	public int getSid() {
+		return sid;
+	}
+	public void setSid(int sid) {
+		this.sid = sid;
+	}
+	public String getStatus() {
+		return Status;
+	}
+	public void setStatus(String status) {
+		Status = status;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((Status == null) ? 0 : Status.hashCode());
 		result = prime * result + amount;
 		result = prime * result + ((cardNum == null) ? 0 : cardNum.hashCode());
 		result = prime * result + cvc;
 		result = prime * result + ((decision == null) ? 0 : decision.hashCode());
 		result = prime * result + ((exp == null) ? 0 : exp.hashCode());
 		result = prime * result + ((nameOnCard == null) ? 0 : nameOnCard.hashCode());
+		result = prime * result + sid;
 		result = prime * result + ((zipCode == null) ? 0 : zipCode.hashCode());
 		return result;
 	}
@@ -80,6 +96,11 @@ public class CreditCard {
 		if (getClass() != obj.getClass())
 			return false;
 		CreditCard other = (CreditCard) obj;
+		if (Status == null) {
+			if (other.Status != null)
+				return false;
+		} else if (!Status.equals(other.Status))
+			return false;
 		if (amount != other.amount)
 			return false;
 		if (cardNum == null) {
@@ -104,6 +125,8 @@ public class CreditCard {
 				return false;
 		} else if (!nameOnCard.equals(other.nameOnCard))
 			return false;
+		if (sid != other.sid)
+			return false;
 		if (zipCode == null) {
 			if (other.zipCode != null)
 				return false;
@@ -114,7 +137,9 @@ public class CreditCard {
 	@Override
 	public String toString() {
 		return "CreditCard [amount=" + amount + ", nameOnCard=" + nameOnCard + ", cardNum=" + cardNum + ", exp=" + exp
-				+ ", cvc=" + cvc + ", zipCode=" + zipCode + ", decision=" + decision + "]";
+				+ ", cvc=" + cvc + ", zipCode=" + zipCode + ", decision=" + decision + ", sid=" + sid + ", Status="
+				+ Status + "]";
 	}
-
+	
+	
 }

@@ -1,11 +1,15 @@
 package com.capeat.beans;
+import javax.validation.constraints.NotNull;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 @Component
 public class UserSignIn {
-    
+	
     private int sid;
+	
     private String eid;
+
     private String password;
     
     
