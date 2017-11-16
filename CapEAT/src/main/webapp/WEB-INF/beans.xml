@@ -15,6 +15,8 @@
         <property name="url" value="jdbc:postgresql://capeat.cn0466qhz7wl.us-east-1.rds.amazonaws.com:5432/capEAT?currentSchema=capcafe"></property> 
         <property name="username" value="capEAT"></property> <property name="password" 
         value="test1234"></property> </bean> 
+        
+        
     <!-- <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="org.postgresql.Driver"></property>
         <property name="url" value="jdbc:postgresql://localhost:5432/postgres"></property>
@@ -34,9 +36,9 @@
     <bean id="historyDAO" class="com.capeat.DAO.HistoryDAOImpl">
         <property name="jdbcTemplate" ref="myJdbcTemplate"></property>
     </bean>
-    
-        <bean id="orderDAO" class="com.capeat.DAO.OrderDAOImpl">
-        <property name="jdbcTemplate" ref="myJdbcTemplate"></property>
-    </bean>
+
+	<bean id="orderDAO" class="com.capeat.DAO.OrderDAOImpl">
+		<property name="jdbcTemplate" ref="myJdbcTemplate"></property>
+	</bean>
     
 </beans>
