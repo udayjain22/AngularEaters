@@ -32,7 +32,7 @@ public class HistoryDAOImpl implements HistoryDAO {
 
             	temp.setOrderId(rs.getInt("orderid"));
             	temp.setItemName(rs.getString("productname"));
-            	temp.setItemPrice(rs.getString("productprice"));
+            	temp.setItemPrice(rs.getString("price"));
             	temp.setOrderLocation(rs.getString("location"));
             	temp.setOrderDate(rs.getDate("orderdt"));
             	temp.setSpiceLevel(rs.getInt("spice"));
