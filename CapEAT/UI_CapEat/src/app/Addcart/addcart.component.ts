@@ -30,6 +30,7 @@ export class AddCartComponent {
     this.arr.forEach(element => {
       this.total += element.price * element.orderCount + 0.5;
     });
+    localStorage.setItem("total", this.total); 
     return this.total;
   };
   getValue(value: number) {
