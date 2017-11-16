@@ -14,7 +14,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.util.SystemPropertyUtils;
 
-import com.capeat.beans.CardDet;
+
 import com.capeat.beans.CreditCard;
 import com.capeat.beans.Order;
 import com.capeat.beans.UserSignIn;
@@ -40,8 +40,8 @@ public class OrderDAOImpl implements OrderDAO {
 		Random random = new Random();
         orderid = random.nextInt();
         orderid = orderid*orderid;
-		String sql = "insert into capcafe.orders(orderid,orderdt,ordercount,spice,productid,productname,location,amount,sid)"
-				+ "values(?,current_date,?,?,?,?,?,?,?)";
+		String sql = "insert into capcafe.orders(orderid,orderdt,ordercount,spice,productid,productname,price,location,amount,sid)"
+				+ "values(?,current_date,?,?,?,?,?,?,?,?)";
 		jdbcTemplate.batchUpdate(sql, new BatchPreparedStatementSetter() {
 			@Override
 			public void setValues(PreparedStatement ps, int i) throws SQLException {
@@ -51,9 +51,10 @@ public class OrderDAOImpl implements OrderDAO {
 				ps.setInt(3, order.getSpice());
 				ps.setInt(4, order.getProductId());
 				ps.setString(5, order.getProductName());
-				ps.setString(6, order.getLocation());
-				ps.setDouble(7, amount);
-				ps.setInt(8, sid);
+				ps.setDouble(6, order.getPrice());
+				ps.setString(7, order.getLocation());
+				ps.setDouble(8, amount);
+				ps.setInt(9, sid);
 
 			}
 
