@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { LoginService } from '../Services/login.service';
 import { Http, RequestOptions, URLSearchParams } from '@angular/http';
 import { Injectable, Inject } from '@angular/core';
+
 //import { HttpParams, HttpClient } from '@angular/common/http';
 
 @Component({
@@ -21,14 +22,13 @@ export class HomeComponent implements OnInit {
 
   showDialog;
   constructor(public loginservice: LoginService) {
-    if (this.userstatus === 'first') {
+    if(sessionStorage["PopupShown"] != 'yes'){ 
       this.showDialog = true;
-    }
-    if (this.userstatus === 'none') {
-      this.showDialog = false;
-    }
+      sessionStorage["PopupShown"] = 'yes';
+      }
+      }
 
-  }
+
   ngOnInit() {
 
   }
@@ -41,8 +41,12 @@ export class HomeComponent implements OnInit {
     this.loginservice.getConnection(this.myParams).subscribe((resp) => {
       this.userstatus = resp.json().status;
       this.sid = resp.json().sid;
+      localStorage.setItem("existingcard", resp.json().cardNum);
       localStorage.setItem("sid", this.sid);
-      if (this.userstatus === 'Pass') {
+      console.log(localStorage.getItem("sid"));
+      console.log(resp.json());
+      if (this.userstatus === 'HasData'||this.userstatus === 'NoData') {
+        localStorage.setItem("userstatus", this.userstatus);        
         this.showDialog = false;
       }
     });
