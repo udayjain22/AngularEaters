@@ -31,7 +31,7 @@ import { LunchComponent } from './Menu/lunch.component';
 import { BreakfastComponent } from './Menu/breakfast.component';
 import { LunchService } from './Services/lunch.service';
 import { BreakfastService } from './Services/breakfast.service';
-
+import {PaymentService} from './Services/payments.service';
 
 
 
@@ -73,6 +73,9 @@ import { BreakfastService } from './Services/breakfast.service';
     LunchService,
     BreakfastService,
     HomeComponent,
+    AddCartComponent,
+    PaymentService
+
    ],
   bootstrap: [AppComponent]
 })
