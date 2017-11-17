@@ -38,8 +38,9 @@ public class OrderDAOImpl implements OrderDAO {
 
 	public int insertorder(List<Order> o, Double amount, Integer sid) {
 		Random random = new Random();
-        orderid = random.nextInt();
-        orderid = orderid*orderid;
+     
+        orderid =Math.abs(random.nextInt());
+   
 		String sql = "insert into capcafe.orders(orderid,orderdt,ordercount,spice,productid,productname,price,location,amount,sid)"
 				+ "values(?,current_date,?,?,?,?,?,?,?,?)";
 		jdbcTemplate.batchUpdate(sql, new BatchPreparedStatementSetter() {
