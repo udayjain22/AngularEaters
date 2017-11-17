@@ -71,8 +71,8 @@ public class OrderDAOImpl implements OrderDAO {
 
 	public void insertCredit(CreditCard c, Integer sid) {
 		String sql = "";
-		System.out.println(sid);
-		System.out.println(c.getDecision());
+	//	System.out.println(sid);
+	//	System.out.println(c.getDecision());
 		if (c.getDecision().equals("insert")) {
 			sql = "insert into capcafe.carddetails(nameoncard,cardnum,cardtype,exp,cvc,zipcode,sid)"
 					+ "values(?,?,'Visa',?,?,?,?)";

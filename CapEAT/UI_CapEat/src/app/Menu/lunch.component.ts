@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LunchComponent implements OnInit {
     pageTitle: string = 'Lunch  Menu (Each option feeds 15 people.)';
-    imageWidth: number = 80;
+    imageWidth: number = 100;
     imageMargin: number = 2;
     showImage: boolean = true;
     errorMessage: string;

@@ -10,7 +10,7 @@ import { BewellService } from '../Services/bewell.service';
 })
 export class BewellComponent implements OnInit {
     pageTitle: string = 'BeWell  Menu';
-    imageWidth: number = 80;
+    imageWidth: number = 100;
     imageMargin: number = 2;
     showImage: boolean = true;
     errorMessage: string;

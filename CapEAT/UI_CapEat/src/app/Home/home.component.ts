@@ -44,8 +44,8 @@ export class HomeComponent implements OnInit {
       this.sid = resp.json().sid;
       localStorage.setItem("existingcard", resp.json().cardNum);
       localStorage.setItem("sid", this.sid);
-      console.log(localStorage.getItem("sid"));
-      console.log(resp.json());
+  //    console.log(localStorage.getItem("sid"));
+  //    console.log(resp.json());
       if (this.userstatus === 'HasData'||this.userstatus === 'NoData') {
         localStorage.setItem("userstatus", this.userstatus);        
         this.showDialog = false;

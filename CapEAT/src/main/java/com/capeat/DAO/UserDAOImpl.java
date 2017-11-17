@@ -38,7 +38,7 @@ public class UserDAOImpl implements UserDAO {
 					+ user.getPassword() + "\'");
 			us = (UserSignIn) jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<UserSignIn>(UserSignIn.class));
 			if (us != null) {
-				System.out.println(us.getSid());
+		//		System.out.println(us.getSid());
 			
 				return getcard();
 			
@@ -56,7 +56,6 @@ public class UserDAOImpl implements UserDAO {
 			String sql = ("SELECT * FROM capcafe.carddetails WHERE carddetails.sid=" + us.getSid());
 			CreditCard cd = (CreditCard) jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<CreditCard>(CreditCard.class));
 			cd.setSid(us.getSid());
-			System.out.println();
 			cd.setStatus("HasData");
 			return cd;
 		} catch (EmptyResultDataAccessException e) {

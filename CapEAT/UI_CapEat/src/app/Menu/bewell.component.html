@@ -41,7 +41,7 @@
                 <tbody>
                     <tr *ngFor='let product of filteredProducts'>
                         <td>
-                            <img *ngIf='showImage'
+                            <img class="image"*ngIf='showImage'
                                 [src]='product.imageUrl'
                                 [title]='product.productName'
                                 [style.width.px]='imageWidth'

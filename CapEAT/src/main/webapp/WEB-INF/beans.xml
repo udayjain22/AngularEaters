@@ -10,18 +10,18 @@
     <!-- Scanning for controller classes -->
     <mvc:annotation-driven />
     <mvc:resources location="/static" mapping="/**"></mvc:resources>
-    <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource"> 
+     <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource"> 
         <property name="driverClassName" value="org.postgresql.Driver"></property> 
         <property name="url" value="jdbc:postgresql://capeat.cn0466qhz7wl.us-east-1.rds.amazonaws.com:5432/capEAT?currentSchema=capcafe"></property> 
         <property name="username" value="capEAT"></property> <property name="password" 
-        value="test1234"></property> </bean> 
+        value="test1234"></property> </bean>
         
         
-    <!-- <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+<!--     <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="org.postgresql.Driver"></property>
-        <property name="url" value="jdbc:postgresql://localhost:5432/postgres"></property>
+        <property name="url" value="jdbc:postgresql://localhost:5433/postgres"></property>
         <property name="username" value="postgres"></property>
-        <property name="password" value="abcd12345"></property>
+        <property name="password" value="password"></property>
     </bean> -->
     
     <bean id="myJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">

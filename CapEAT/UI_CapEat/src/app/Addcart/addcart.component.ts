@@ -36,7 +36,7 @@ export class AddCartComponent {
     return this.total;
   };
   getValue(value: number) {
-    console.log(value);
+   // console.log(value);
     return value;
   }
 
@@ -45,18 +45,16 @@ export class AddCartComponent {
   constructor(public menuService: MenuService, public historyService: HistoryService,
     public bewellService: BewellService, public route: ActivatedRoute ) {
       this.userStatus = localStorage.getItem("userstatus");
-      console.log(this.userStatus);
+  //    console.log(this.userStatus);
     this.value = 0;
     this.sub = this.route.params.subscribe(params => {
       this.serviceName = params['serviceName'];
       if (this.serviceName === 'menu') {
         this.arr = menuService.cartItems;
-        console.log(this.arr);
         this.service = menuService;
         this.continueShopping = '/menu';
       }else if (this.serviceName === 'history') {
         this.arr = historyService.cartItems;
-        console.log(this.arr);
         this.service = historyService;
         this.continueShopping = '/history';
       historyService.cartItems.forEach((item: HistoryItem) => {
@@ -69,7 +67,6 @@ export class AddCartComponent {
 
       } else {
         this.arr = bewellService.cartItems;
-        console.log(this.arr);
         this.service = bewellService;
         this.continueShopping = '/bewell';
       }
