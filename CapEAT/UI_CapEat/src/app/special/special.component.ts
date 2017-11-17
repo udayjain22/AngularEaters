@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component,  OnInit } from '@angular/core';
+import { RouterModule }   from '@angular/router';
 
 @Component({
   selector: 'app-special',
@@ -10,13 +10,14 @@ import { RouterModule } from '@angular/router';
 export class SpecialComponent implements OnInit {
   title = 'special';
 
-  constructor() {
+ constructor() {
 
 
   }
 
-  ngOnInit() {
+  ngOnInit()  {
+   
   }
 
-
+ 
 }
