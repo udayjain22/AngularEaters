@@ -1,26 +1,29 @@
 <div class='panel panel-primary'>
     <div class='panel-heading'>
-      <div class="container-fluid">
-        <div class="col-md-11">
-       <h4 > Order History Details </h4>
-        </div><div class="col-md-1">
-                <button title="Checkout all cart items" 
-                [routerLink]="['/addCart/history']" class="draggable btn btn-primary btn-circle btn-xl" 
-                role="button" aria-expanded="false"> <span class="glyphicon glyphicon-shopping-cart">
-                  </span></button>
-           <span  class="cart-items-count">
-             <span class=" notification-counter">{{history.getTotalCartItems()}}</span>
-            </span>
+        <div class="container-fluid">
+           <br>
+           <br>
+           <br>
+           <br> 
+            <div class="col-md-11">
+                <h4> Order History Details </h4>
             </div>
-      </div>
+            <div class="col-md-1">
+                <button title="Checkout all cart items" [routerLink]="['/addCart/history']" class="draggable btn btn-primary btn-circle btn-xl"
+                    role="button" aria-expanded="false"> <span class="glyphicon glyphicon-shopping-cart">
+                  </span></button>
+                <span class="cart-items-count">
+             <span class=" notification-counter">{{history.getTotalCartItems()}}</span>
+                </span>
+            </div>
+        </div>
     </div>
     <div class='panel-body'>
-        
-         
-            
-         <div class='table-responsive'>
-            <table class='table'
-                    *ngIf='orderHistory?.length'>
+
+
+
+        <div class='table-responsive'>
+            <table class='table' *ngIf='orderHistory?.length'>
                 <thead>
                     <tr>
                         <th>Order Id</th>
@@ -33,11 +36,12 @@
                 <tbody>
                     <tr *ngFor='let order of orderHistory'>
                         <td>{{order.orderId}}</td>
-                        <td><h4>{{ order.itemName }}</h4>
-                        <p>{{ order.itemDesc }}</td>
+                        <td>
+                            <h4>{{ order.itemName }}</h4>
+                            <p>{{ order.itemDesc }}</td>
                         <td>{{ order.itemPrice | currency:'USD':true:'1.2-2'}}</td>
                         <td>{{order.orderDate}}
-                        <td><button type="button" class="btn btn-primary" (click)="addItemToCart(order)">Add To Cart</button></td>
+                            <td><button type="button" class="btn btn-primary" (click)="addItemToCart(order)">Add To Cart</button></td>
                     </tr>
                 </tbody>
             </table>
