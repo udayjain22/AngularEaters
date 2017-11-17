@@ -1,29 +1,21 @@
+
 .body {
     background-color: #7395AE;
     
 }
-
   .container-fluid {
     background-color: #7395AE;
     margin-top: 0px;
     height: 600px;
  
-
 }
-
 .calendar {
     margin-left: 20%;
 }
-
 .calendarHeader {
     text-align: center;
     color: #3b5466;
 }
-
-
 .calendarSubheader {
     text-align: center;
-    color: #3b5466;
-}
-
-
+    color: white;
