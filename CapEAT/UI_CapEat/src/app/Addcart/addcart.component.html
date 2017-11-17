@@ -12,8 +12,7 @@
 
         <div class="container">
             <div id="alert">
-                <a class="alert" href="#alert">10% of Purchase Price Goes To Feedmore</a>
-                <!-- <a  class="alert" href="feedmore.org">Learn more </a> -->
+                <a class="alert" href="#/charity">10% of Purchase Price Goes To Feedmore</a>
             </div>
     
             <br>
@@ -96,7 +95,7 @@
                     <tr></tr>
                     <tr>
                         <td>
-                            <a [routerLink]="[continueShopping]" class="btn btn-warning">
+                            <a [routerLink]="[continueShopping]" class="btn btn-info">
                                     <i class="fa fa-angle-left"></i> Continue Shopping</a>
                         </td>
                         <td colspan="6" class="hidden-xs"></td>
@@ -107,7 +106,7 @@
                             </a>
                             </div>
                         <div  *ngIf="this.userStatus === 'NoData'">
-                            <a [routerLink]="['/paymentone']" class="btn btn-success btn-block">Checkout
+                            <a [routerLink]="['/paymentone']" class="btn  btn-info btn-success btn-block">Checkout
                                     <i class="fa fa-angle-right"></i>
                             </a>
                             </div>

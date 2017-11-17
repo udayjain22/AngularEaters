@@ -28,7 +28,7 @@
                 <thead>
                     <tr>
                         <th>
-                            <button class='btn btn-primary'
+                            <button class='btn btn-info btn-primary'
                                 (click)='toggleImage()'>
                                 {{showImage ? 'Hide' : 'Show'}} Image
                             </button>
@@ -50,7 +50,7 @@
                         <td><h4>{{ product.productName }}</h4>
                         <p>{{ product.description }}</td>
                         <td>{{ product.price | currency:'USD':true:'1.2-2'}}</td>
-                        <td><button type="button" class="btn btn-primary" (click)="addItemToCart(product)">Add To Cart</button></td>
+                        <td><button type="button" class="btn btn-info btn-primary" (click)="addItemToCart(product)">Add To Cart</button></td>
                     </tr>
                 </tbody>
             </table>
