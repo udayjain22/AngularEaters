@@ -13,7 +13,7 @@ export class HistoryComponent implements OnInit {
 
   
   public sid;
-  
+  public newuser;
   
   public orderHistory: Array<HistoryItem> = [];
   public selectedOrders: Array<HistoryItem> = [];
@@ -27,6 +27,9 @@ export class HistoryComponent implements OnInit {
     console.log(this.sid);
     this.history.getHistory(this.sid).subscribe((resp) => {
       this.orderHistory = resp.json();
+      if(this.orderHistory.length===0){
+        this.newuser = "newuser";
+      }
       console.log(this.orderHistory);
     });
 
