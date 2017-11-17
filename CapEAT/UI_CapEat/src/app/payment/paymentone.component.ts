@@ -1,13 +1,12 @@
 import { Component,  OnInit } from '@angular/core';
 import { AddCartComponent } from '../Addcart/addcart.component';
 import { PaymentService } from '../Services/payments.service';
-import { Router } from '@angular/router';
 @Component({
-  selector: 'app-payment',
-  templateUrl: './payment.component.html',
+  selector: 'app-paymentone',
+  templateUrl: './paymentone.component.html',
   styleUrls: ['./payment.component.css']
 })
-export class PaymentComponent implements OnInit {
+export class PaymentoneComponent implements OnInit {
  
   public total;
   public savecard = false;
@@ -25,10 +24,7 @@ export class PaymentComponent implements OnInit {
   public decision;
   public option = 1;
   public userstatus;
-  public router;
-  orderid;
-  constructor(public addcart:AddCartComponent, public pay: PaymentService, public routes: Router) {
-    this.router = routes;
+  constructor(public addcart:AddCartComponent, public pay: PaymentService) {
   }
   ngOnInit()  {
    this.addcartobj = this.addcart.arr;
@@ -36,8 +32,7 @@ export class PaymentComponent implements OnInit {
    this.sid = localStorage.getItem("sid");
    this.userstatus = localStorage.getItem("userstatus");
    
-   this.existingcard = "************"+localStorage.getItem("existingcard");  
-
+   this.existingcard = localStorage.getItem("existingcard");  
   }
   fetch() {
     console.log(this.deletecard);
@@ -50,9 +45,6 @@ export class PaymentComponent implements OnInit {
     if(this.deletecard === true){
       this.decision = "delete";
     }
-    else
-    this.decision = "none";
-    
     this.carddet = {
       "nameOnCard" :this.name,
       "cardNum" :this.cardnum,
@@ -69,10 +61,8 @@ export class PaymentComponent implements OnInit {
       "sid" : this.sid
     };
     this.pay.paynow(this.ordercredit).subscribe((resp) => {
-      this.orderid = JSON.stringify(resp.json()).substr(1);
-        console.log(this.orderid);
-        localStorage.setItem("orderid",this.orderid);
-      this.router.navigateByUrl('/thankyou');
+        console.log(resp.json());
+        localStorage.setItem("orderid",resp.json());
     });
  }
  

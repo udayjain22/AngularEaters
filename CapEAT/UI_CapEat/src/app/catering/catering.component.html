@@ -1,26 +1,33 @@
 <html>
-        <head>
+    
+    <head>
+    
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        </head>
-        <body style="background-color: #7395AE">
-            <div class="container-fluid">
-        <h1 class="chefHeader">Welcome to The Chef's Table</h1>
-        <h4 class="subheader">Need to order enough food to feed a hungry team? Order From A Pre-Selected Menu. </h4>
-        
-        
-        <a [routerLink]="['/breakfast']">
-            <img src="././assets/images/breakfast.png" id="breakfastMenu" class="image">
+    </head>
+    
+    <body style="background-color: #7395AE">
+        <div class="container-fluid">
+            <br>
+            <div class="main-menu-pages">
+                <h1 class="chefHeader">Welcome to The Chef's Table</h1>
+                <h4 class="subheader">Need to order enough food to feed a hungry team? Order From A Pre-Selected Menu. </h4>
+            </div>
+    
+            <a [routerLink]="['/breakfast']">
+                <img src="././assets/images/breakfast.png" id="breakfastMenu" class="image">
             </a>
             <br>
             <br>
-        <a [routerLink]="['/lunch']">
+            <a [routerLink]="['/lunch']">
                 <img src="././assets/images/lunch2.png" id="lunchMenu" class="image">
-                </a>
-        <br>
-        <br>
+            </a>
+            <br>
+            <br>
         </div>
-        
-        </body>
-        </html>
+    
+    
+    </body>
+    
+    </html>

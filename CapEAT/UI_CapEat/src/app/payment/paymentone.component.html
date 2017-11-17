@@ -1,20 +1,10 @@
-<div align="center" style="border:10px" class="med_font">
-    <br>
-    <div class="main-menu-pages"></div>
-    <label>New Card</label>
-    <input name="options" ng-control="options" type="radio" [value]="1" [(ngModel)]="option" id="newcard">
-    <label>Existing Card</label>
-    <input name="options" ng-control="options" type="radio" [value]="2" [(ngModel)]="option" id="existingcard">
-    <br/>
-</div>
-<div *ngIf="option === 1">
     <div class="container-fluid py-3">
         <div class="row">
-            <div class="col-12 col-sm-8 col-md-6 col-lg-4 mx-auto mx-auto">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4 mx-auto">
                 <div id="pay-invoice" class="card">
-                    <div class="card-body payment-form">
+                    <div class="card-body">
                         <div class="card-title">
-                            <h3 class="text-center">Pay</h3>
+                            <h3 class="text-center">Pay Invoice</h3>
                         </div>
                         <hr>
                         <form action="" method="post" novalidate="novalidate">
@@ -99,74 +89,3 @@
             </div>
         </div>
     </div>
-</div>
-<div *ngIf="option ===2">
-    <div class="container-fluid py-3">
-        <div class="row">
-            <div class="col-12 col-sm-8 col-md-6 col-lg-4 mx-auto">
-                <div id="pay-invoice" class="card">
-                    <div class="card-body payment-form">
-                        <div class="card-title ">
-                            <h3 class="text-center">Pay</h3>
-                        </div>
-                        <hr>
-                        <form action="" method="post" novalidate="novalidate">
-                            <div class="form-group text-center">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <i class="text-muted fa fa-cc-visa fa-2x"></i>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <i class="fa fa-cc-mastercard fa-2x"></i>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <i class="fa fa-cc-amex fa-2x"></i>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <i class="fa fa-cc-discover fa-2x"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="form-group">
-                                <label for="cc-payment" class="control-label mb-1">Payment amount</label>
-                                <input id="cc-pament" name="cc-payment" type="text" readonly [value]="total" class="form-control" aria-required="true" aria-invalid="false" value="100.00">
-                            </div>
-                            <div class="form-group">
-                                <label for="cc-number" class="control-label mb-1">Existing Card number</label>
-                                <input id="cc-number" name="cc-number" type="tel" readonly [value]="existingcard" class="form-control cc-number" value="" data-val="true"
-                                    data-val-required="Please enter the card number" data-val-cc-number="Please enter a valid card number"
-                                    autocomplete="cc-number">
-                                <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
-                            </div>
-                            <div class="row">
-                                <div class="col-6">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="x_zip" class="control-label mb-1">Zip code</label>
-                                <input id="x_zip" name="x_zip" type="text" [(ngModel)]="postalcode" class="form-control" value="" data-val="true" data-val-required="Please enter the ZIP/Postal code"
-                                    autocomplete="postal-code">
-                                <span class="help-block" data-valmsg-for="x_zip" data-valmsg-replace="true"></span>
-                            </div>
-                            <form action="#" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false; }">
-                                <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the Terms and Conditions.
-                                <br>
-                                <input type="checkbox" name="checkbox" value="check" id="save" [(ngModel)]="deletecard"/> Please delete my card information.
-                                <br>
-                                <br>
-                            </form>
-                            <div>
-
-                                <a (click)='fetch()' class="btn btn-lg btn-info btn-block">Pay
-                                    <i class="fa fa-lock fa-lg"></i>&nbsp;
-                                </a>
-
-            
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>

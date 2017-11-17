@@ -29,12 +29,12 @@ public class LandingController {
 	@Autowired
 	OrderDAOImpl orderDAO;
 
-	CardDet newCd = new CardDet();
+	CreditCard newCd = new CreditCard();
 
 	@RequestMapping(value = "/signin", method = RequestMethod.POST)
-	public @ResponseBody CardDet listAll(@RequestBody UserSignIn user) {
+	public @ResponseBody CreditCard listAll(@RequestBody UserSignIn user) {
 		System.out.println("signing controller");
-		CardDet cd = userDAO.authentication(user);		
+		CreditCard cd = userDAO.authentication(user);		
 		System.out.println(cd.getSid());
 		return cd;
 	}
@@ -63,6 +63,8 @@ public class LandingController {
         System.out.println(w.getSid()); 
         System.out.println(Double.parseDouble(w.getAmount()));
         int orderid = orderDAO.insertorder(w.getOrder(), Double.parseDouble(w.getAmount()), Integer.parseInt(w.getSid()));
+        System.out.println(orderid);
+        System.out.println(w.getCreditCard().getDecision());
         if(w.getCreditCard().getDecision().equals("insert") || w.getCreditCard().getDecision().equals("update")) {
         		orderDAO.insertCredit(w.getCreditCard(),Integer.parseInt(w.getSid()));
         }
