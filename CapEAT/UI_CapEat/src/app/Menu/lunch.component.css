@@ -67,10 +67,11 @@ thead {
     margin: 0;
     padding: 0;
     width: 100%;
-    
-   
-    
- }
+}
+
+.image {
+height: 70px;
+}
 
 
 

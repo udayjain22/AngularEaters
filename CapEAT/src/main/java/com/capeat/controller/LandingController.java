@@ -33,38 +33,31 @@ public class LandingController {
 
 	@RequestMapping(value = "/signin", method = RequestMethod.POST)
 	public @ResponseBody CreditCard listAll(@RequestBody UserSignIn user) {
-		System.out.println("signing controller");
+	//	System.out.println("signing controller");
 		CreditCard cd = userDAO.authentication(user);		
-		System.out.println(cd.getSid());
+	//	System.out.println(cd.getSid());
 		return cd;
 	}
 
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String listAll() {
-		System.out.println("Landing controller");
+	//	System.out.println("Landing controller");
 		return "/static/dist/index.html";
 	}
 
 	@RequestMapping(value = "/history", method = RequestMethod.POST)
 	public @ResponseBody List<History> listAll(@RequestBody String sid) {
-		System.out.println("hello history");
+	//	System.out.println("hello history");
 		List<History> listHistory = new ArrayList<History>();
 		listHistory = historyDAO.historyList(sid);
-		System.out.println(listHistory.toString());
+	//	System.out.println(listHistory.toString());
 		return listHistory;
 	}
 	
 	@RequestMapping(value="/makepayment",method=RequestMethod.POST)
 	   public @ResponseBody  int listAll(@RequestBody Wrapper w){
 		List<Order> credit = new ArrayList<>();
-		System.out.println(w.getOrder().toString());
-        System.out.println(w.getCreditCard());
-        System.out.println(w.getAmount());
-        System.out.println(w.getSid()); 
-        System.out.println(Double.parseDouble(w.getAmount()));
-        int orderid = orderDAO.insertorder(w.getOrder(), Double.parseDouble(w.getAmount()), Integer.parseInt(w.getSid()));
-        System.out.println(orderid);
-        System.out.println(w.getCreditCard().getDecision());
+		int orderid = orderDAO.insertorder(w.getOrder(), Double.parseDouble(w.getAmount()), Integer.parseInt(w.getSid()));
         if(w.getCreditCard().getDecision().equals("insert") || w.getCreditCard().getDecision().equals("update")) {
         		orderDAO.insertCredit(w.getCreditCard(),Integer.parseInt(w.getSid()));
         }

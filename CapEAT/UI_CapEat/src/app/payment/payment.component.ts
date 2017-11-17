@@ -48,7 +48,7 @@ export class PaymentComponent implements OnInit {
     }
 }
   fetch() {
-    console.log(this.deletecard);
+  //  console.log(this.deletecard);
     if((this.savecard === true) && ( this.userstatus === 'HasData')){
       this.decision = "update";
     }
@@ -78,7 +78,7 @@ export class PaymentComponent implements OnInit {
     };
     this.pay.paynow(this.ordercredit).subscribe((resp) => {
       this.orderid = JSON.stringify(resp.json()).substr(1);
-        console.log(this.orderid);
+    //    console.log(this.orderid);
         localStorage.setItem("orderid",this.orderid);
       this.router.navigateByUrl('/thankyou');
     });

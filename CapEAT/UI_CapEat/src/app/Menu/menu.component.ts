@@ -10,7 +10,7 @@ import { MenuService } from '../Services/menu.service';
 })
 export class MenuComponent implements OnInit {
     pageTitle: string = 'Indian  Menu';
-    imageWidth: number = 80;
+    imageWidth: number = 100;
     imageMargin: number = 2;
     showImage: boolean = true;
     errorMessage: string;

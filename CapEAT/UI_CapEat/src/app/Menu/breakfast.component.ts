@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 })
 export class BreakfastComponent implements OnInit {
     pageTitle: string = 'Breakfast  Menu (Each option feeds 15 people.)';
-    imageWidth: number = 80;
+    imageWidth: number = 100;
     imageMargin: number = 2;
     showImage: boolean = true;
     errorMessage: string;

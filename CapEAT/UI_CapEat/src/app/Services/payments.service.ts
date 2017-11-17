@@ -9,7 +9,7 @@ export class PaymentService {
     constructor(@Inject(Http) private http: Http) {
     }
     paynow(sendorderobj): Observable<any> {
-        console.log(sendorderobj);
+    //    console.log(sendorderobj);
         return this.http.post('/CapEAT/makepayment', sendorderobj) ;
     }
 }

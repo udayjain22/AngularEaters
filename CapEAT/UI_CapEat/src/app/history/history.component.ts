@@ -24,13 +24,13 @@ export class HistoryComponent implements OnInit {
 
   ngOnInit() {
     this.sid = localStorage.getItem("sid");
-    console.log(this.sid);
+  //  console.log(this.sid);
     this.history.getHistory(this.sid).subscribe((resp) => {
       this.orderHistory = resp.json();
       if(this.orderHistory.length===0){
         this.newuser = "newuser";
       }
-      console.log(this.orderHistory);
+  //    console.log(this.orderHistory);
     });
 
   }
