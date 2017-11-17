@@ -34,9 +34,10 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="form-group" >
+                            <div class="form-group">
                                 <label for="cc-payment" class="control-label mb-1">Payment amount</label>
-                                <input id="cc-pament" name="cc-payment" type="text" [value]="total" readonly class="form-control" aria-required="true" aria-invalid="false" value="100.00">
+                                <input id="cc-pament" name="cc-payment" type="text" [value]="total" readonly class="form-control" aria-required="true" aria-invalid="false"
+                                    value="100.00">
                             </div>
                             <div class="form-group has-success">
                                 <label for="cc-name" class="control-label mb-1">Name on card</label>
@@ -50,7 +51,7 @@
                                     data-val-required="Please enter the card number" data-val-cc-number="Please enter a valid card number"
                                     autocomplete="cc-number">
                                 <h6>
-                                    <font  color='Green'>Use Capital One Card and get 1.5% cash back </font>
+                                    <font color='Green'>Use Capital One Card and get 1.5% cash back </font>
                                 </h6>
                                 <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
                             </div>
@@ -66,9 +67,10 @@
                                 <div class="col-6">
                                     <label for="x_card_code" class="control-label mb-1">Security code</label>
                                     <div class="input-group">
-                                        <input id="x_card_code" name="x_card_code" [(ngModel)]="seccode" type="tel" class="form-control cc-cvc" value="" data-val="true" data-val-required="Please enter the security code"
-                                            data-val-cc-cvc="Please enter a valid security code" autocomplete="off">
-                                </div>
+                                        <input id="x_card_code" name="x_card_code" [(ngModel)]="seccode" type="tel" class="form-control cc-cvc" value="" data-val="true"
+                                            data-val-required="Please enter the security code" data-val-cc-cvc="Please enter a valid security code"
+                                            autocomplete="off">
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -129,12 +131,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="cc-payment" class="control-label mb-1">Payment amount</label>
-                                <input id="cc-pament" name="cc-payment" type="text" readonly [value]="total" class="form-control" aria-required="true" aria-invalid="false" value="100.00">
+                                <input id="cc-pament" name="cc-payment" type="text" readonly [value]="total" class="form-control" aria-required="true" aria-invalid="false"
+                                    value="100.00">
                             </div>
                             <div class="form-group">
                                 <label for="cc-number" class="control-label mb-1">Existing Card number</label>
-                                <input id="cc-number" name="cc-number" type="tel" readonly [value]="existingcard" class="form-control cc-number" value="" data-val="true"
-                                    data-val-required="Please enter the card number" data-val-cc-number="Please enter a valid card number"
+                                <input id="cc-number" name="cc-number" type="tel" readonly [value]="existingcard" class="form-control cc-number" value=""
+                                    data-val="true" data-val-required="Please enter the card number" data-val-cc-number="Please enter a valid card number"
                                     autocomplete="cc-number">
                                 <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
                             </div>
@@ -151,17 +154,16 @@
                             <form action="#" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false; }">
                                 <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the Terms and Conditions.
                                 <br>
-                                <input type="checkbox" name="checkbox" value="check" id="save" [(ngModel)]="deletecard"/> Please delete my card information.
+                                <input type="checkbox" name="checkbox" value="check" id="save" [(ngModel)]="deletecard" /> Please delete my card information.
                                 <br>
                                 <br>
                             </form>
                             <div>
 
-                                <a (click)='fetch()' class="btn btn-lg btn-info btn-block">Pay
+                                <a [routerLink]="['/thankyou']" (click)='fetch()' class="btn btn-lg btn-info btn-block">Pay
                                     <i class="fa fa-lock fa-lg"></i>&nbsp;
-                                </a>
 
-            
+                                </a>
                             </div>
                         </form>
                     </div>
