@@ -36,6 +36,7 @@ export class BreakfastComponent implements OnInit {
         this.router = routes;
     }
     paynow(index: number){
+        localStorage.setItem("amount",JSON.stringify(this.filteredProducts[index].price));        
         localStorage.setItem("lunchchef", JSON.stringify(this.filteredProducts[index]));
         this.router.navigateByUrl('/payment');            
     }

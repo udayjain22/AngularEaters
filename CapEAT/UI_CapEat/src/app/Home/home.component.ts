@@ -2,12 +2,13 @@ import { Component, OnInit, Input } from '@angular/core';
 import { LoginService } from '../Services/login.service';
 import { Http, RequestOptions, URLSearchParams } from '@angular/http';
 import { Injectable, Inject } from '@angular/core';
+import { FormBuilder, Validators} from "@angular/forms";
 
 //import { HttpParams, HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
+  templateUrl: './home.component.html',//
   styleUrls: ['./home.component.css']
 })
 

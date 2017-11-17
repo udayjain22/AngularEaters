@@ -237,24 +237,29 @@
 	</div>
 	<br>
 	<div>
-		<app-dialog [(visible)]="showDialog">
-			<form>
+		<app-dialog [(visible)]="showDialog" without-backdrop>
+
+				<form #f="ngForm">
 				<div class="input">
 					<h2> Sign in </h2>
 					<div *ngIf="userstatus==='Fail'"><span style="color:red;">Authentication Failed!! Please try again</span> </div>
 					<hr>
 					<label>Username</label>
-					<input type="text" class="form-control" placeholder="abc123" [(ngModel)]="eid" id="eid" name="eid" required autofocus>
+					<input type="text" class="form-control" placeholder="abc123" [(ngModel)]="eid" id="eid" name="eid" required>
+				
 				</div>
 
 				<div class="input">
 					<label>Password</label>
 					<input type="password" class="form-control" [(ngModel)]="password" name="password" required>
-
+					
 				</div>
 				<br>
-				<button type="button" (click)='verifyUser()' class="btn btn-info btn-block">Submit</button>
-
+				<div class="form-group">
+				<input type="submit" (click)='verifyUser()' [disabled]="!f.valid" class="btn btn-info btn-block">
+			
+				
+			</div>
 			</form>
 
 		</app-dialog>

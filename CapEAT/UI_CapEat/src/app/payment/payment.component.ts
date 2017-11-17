@@ -17,6 +17,7 @@ export class PaymentComponent implements OnInit {
   public exp;
   public seccode;
   public addcartobj;
+  public try: any[] = [];
   public postalcode;
   public carddet : Object;
   public ordercredit : Object;
@@ -32,13 +33,20 @@ export class PaymentComponent implements OnInit {
   }
   ngOnInit()  {
    this.addcartobj = this.addcart.arr;
-   this.total = localStorage.getItem("total");
    this.sid = localStorage.getItem("sid");
    this.userstatus = localStorage.getItem("userstatus");
    
    this.existingcard = "************"+localStorage.getItem("existingcard");  
-
-  }
+  if(localStorage.getItem("lunchchef")!==undefined && localStorage.getItem("lunchchef")!== null ){
+    this.total = JSON.parse(localStorage.getItem("amount"));    
+    this.try.push(JSON.parse(localStorage.getItem("lunchchef")));
+    this.addcartobj = this.try;
+    }
+    else{
+      this.total = localStorage.getItem("total");      
+      this.addcartobj = this.addcart.arr;
+    }
+}
   fetch() {
     console.log(this.deletecard);
     if((this.savecard === true) && ( this.userstatus === 'HasData')){

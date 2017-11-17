@@ -15,6 +15,8 @@ export class LunchComponent implements OnInit {
     showImage: boolean = true;
     errorMessage: string;
     public router;
+    public try: any[] = [];
+    
 
     _listFilter: string;
     get listFilter(): string {
@@ -26,6 +28,7 @@ export class LunchComponent implements OnInit {
     }
 
     paynow(index: number){
+        localStorage.setItem("amount",JSON.stringify(this.filteredProducts[index].price));                
         localStorage.setItem("lunchchef", JSON.stringify(this.filteredProducts[index]));
         this.router.navigateByUrl('/payment');            
     }
