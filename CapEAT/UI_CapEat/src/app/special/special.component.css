@@ -6,7 +6,7 @@
   .container-fluid {
     background-color: #7395AE;
     margin-top: 0px;
-    height: 600px;
+    height: 800px;
  
 }
 .calendar {
@@ -14,7 +14,7 @@
 }
 .calendarHeader {
     text-align: center;
-    color: #3b5466;
+    color: white;
 }
 
 .calendarSubheader {
