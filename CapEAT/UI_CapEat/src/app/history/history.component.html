@@ -1,4 +1,8 @@
-<div class='panel panel-primary'>
+<div *ngIf="this.newuser === 'newuser' ">
+        <div class="container-fluid">
+                <h3 class="display-3" id="thanksHeader" style="margin-left: 450px;"><font color="black">You have no order history</font></h3></div>
+</div>
+<div class='panel panel-primary' *ngIf="this.newuser !== 'newuser' ">
     <div class='panel-heading'>
       <div class="container-fluid">
         <div class="col-md-11">
