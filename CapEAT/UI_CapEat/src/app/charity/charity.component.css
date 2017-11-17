@@ -1,28 +1,23 @@
 
-
-.img_class {
-    width:260px;
-    height:250px;
-}
-
 .chefHeader {
     text-align: center;
-    color: #3b5466;
+    color: white;
  
    
 }
 
 .subheader {
     text-align: center;
-    color: #3b5466;
+    color: white;
    
 }
+
 
 .body {
     background-color: #7395AE;
 }
 
-#breakfastMenu {
+.image {
     margin: auto;
     display: block;
     width: 400px;
@@ -30,17 +25,9 @@
     height: auto;
 }
 
-#lunchMenu {
-    margin: auto;
-    display: block;
-    width: 400px;
-    max-width: 100%;
-    height: auto;
-}
-
-.container {
+.container-fluid {
     width: 750px;
-    height: 600px;
+    height: 700px;
    
 
  }
@@ -54,4 +41,37 @@
     width: 350px;
     margin-left: 540px;
     margin-top: 50px;
+ }
+
+
+.btn btn-primary btn-sm {
+    text-align: center;
+}
+ .container {
+     text-align: center;
+     margin-top: 50px;
+     
+ }
+
+ .btn {
+     width: 180px;
+     height: 50px;
+     margin: 0 auto;
+     padding: 0;
+     display: inline-block;
+     line-height: 50px;
+     text-align: center;
+     font-size: 13px;
+     margin-left: 131px;
+ }
+
+ .separator {
+    display:block;
+    border:none;
+    color: #557A95;
+    height:1px;
+    background: #3b5466;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#3b5466), to(#557A95));
+    
+     
  }

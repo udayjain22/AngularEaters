@@ -1,5 +1,5 @@
 #text-blue{
-    color: rgb(38, 55, 66);
+    color: white;
     text-align: center;
     text-decoration: none;
    display: inline-block;
@@ -13,13 +13,14 @@
 .navbar {
     background-color: #557A95;
     margin: 0px;
-    
+    height: 75px!important;
+    position: fixed;
+    z-index: 10;
+    margin-bottom: 75px;
 }
 
 .image {
-    
-    width: 150px;
-    height: 100px;
+    height: 25px;
 }
 
 .form-control {
@@ -36,4 +37,8 @@
 a:hover {
     text-decoration: underline !important; 
    
+  }
+
+ .header-image{
+    margin: 0px 15px;
   }

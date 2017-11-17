@@ -13,7 +13,7 @@
 #dropdownContent {
     width: 500px;
     height: 130px;
-    background-color: #ADD8E6;
+    background-color: lightgray;
 }
 
 
@@ -25,6 +25,7 @@
     height: 40px;
     background-color: #557A95;
     font-size: 20px;
+    color: white;
     
   
 
@@ -35,7 +36,8 @@
     height: auto;
     height: 400px;
     display: block;
-    margin: 0 auto;
+    margin: auto;
+   
    
    
 
@@ -43,11 +45,11 @@
 
 #mapHeader {
     text-align: center;
-    color: #3b5466;
+    color: white;
 }
 
 #mapDescription {
     text-align: center;
-    color: #3b5466;
+    color: white;
 }
 

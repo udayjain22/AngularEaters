@@ -1,16 +1,23 @@
-.main{
-    background: black;
-    text-align: -webkit-center;
-    font-size: 16px;
-    color: blueviolet;
+
+.body {
+    background-color: #7395AE;
+    
+}
+  .container-fluid {
+    background-color: #7395AE;
+    margin-top: 0px;
+    height: 800px;
+ 
+}
+.calendar {
+    margin-left: 20%;
+}
+.calendarHeader {
+    text-align: center;
+    color: white;
 }
 
-.header{
-    font-size: -webkit-xxx-large;
-    color: blue;
-}
-
-.img_class {
-    width:260px;
-    height:250px;
+.calendarSubheader {
+    text-align: center;
+    color: white;
 }

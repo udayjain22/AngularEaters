@@ -24,7 +24,7 @@ meter::-webkit-meter-optimum-value {
     margin-bottom: 0px;
     margin-right: 0px;
     margin-left: 0px;
-    height: 500px;
+    height: 600px;
 }
 
 .tableRow {
@@ -53,7 +53,8 @@ meter::-webkit-meter-optimum-value {
 }
 
 .nutritionHeader {
-    color: #3b5466;
+    color: white;
+    margin-left: 500px;
 }
 
 

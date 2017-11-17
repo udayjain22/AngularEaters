@@ -112,3 +112,9 @@ h5 {
 .meta a:hover {
     color: rgba(0, 0, 0, .87);
 }
+
+
+.container-fluid {
+    background-color: #7395AE;
+    height: 700px;
+}

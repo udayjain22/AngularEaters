@@ -107,7 +107,7 @@
 }
 .alert {
     background-color: #18e26f;
-    background-image: -webkit-linear-gradient(135deg, transparent,
+    /* background-image: -webkit-linear-gradient(135deg, transparent,
                       transparent 25%, hsla(0,0%,0%,.05) 25%,
                       hsla(0,0%,0%,.05) 50%, transparent 50%,
                       transparent 75%, hsla(0,0%,0%,.05) 75%,
@@ -131,7 +131,7 @@
                       transparent 25%, hsla(0,0%,0%,.1) 25%,
                       hsla(0,0%,0%,.1) 50%, transparent 50%,
                       transparent 75%, hsla(0,0%,0%,.1) 75%,
-                      hsla(0,0%,0%,.1));
+                      hsla(0,0%,0%,.1)); */
     background-size: 20px 20px;
     box-shadow: 0 5px 0 hsla(0,0%,0%,.1);
     color: #f6f6f6;
@@ -153,6 +153,7 @@
 		
 
 }
+
 
 /* Animation */
 
