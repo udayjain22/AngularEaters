@@ -1,6 +1,9 @@
 
 
-
+.img_class {
+    width:260px;
+    height:250px;
+}
 
 .chefHeader {
     text-align: center;
@@ -19,7 +22,7 @@
     background-color: #7395AE;
 }
 
-.image {
+#breakfastMenu {
     margin: auto;
     display: block;
     width: 400px;
@@ -27,9 +30,17 @@
     height: auto;
 }
 
-.container-fluid {
+#lunchMenu {
+    margin: auto;
+    display: block;
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
     width: 750px;
-    height: 700px;
+    height: 600px;
    
 
  }

@@ -1,24 +1,15 @@
-import { Component,  OnInit } from '@angular/core';
-import { RouterModule }   from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-special',
   templateUrl: './special.component.html',
   styleUrls: ['./special.component.css']
 })
-
 export class SpecialComponent implements OnInit {
-  title = 'special';
 
- 
-  constructor() {
+  constructor() { }
 
-
+  ngOnInit() {
   }
 
-  ngOnInit()  {
-   
-  }
-
- 
 }
