@@ -106,7 +106,7 @@
     display: none;
 }
 .alert {
-    background-color: #18e26f;
+    background-color: cadetblue;
     /* background-image: -webkit-linear-gradient(135deg, transparent,
                       transparent 25%, hsla(0,0%,0%,.05) 25%,
                       hsla(0,0%,0%,.05) 50%, transparent 50%,
@@ -182,3 +182,4 @@
     50% { opacity: 1; }
     100% { top: 0; }
 }
+
